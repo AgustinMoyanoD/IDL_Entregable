@@ -1,0 +1,737 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/10/2025 19:31:24"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    SumadorReCompleto123
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module SumadorReCompleto123_vlg_sample_tst(
+	b0,
+	b1,
+	b2,
+	M0,
+	M1,
+	M2,
+	M3,
+	M4,
+	M5,
+	M6,
+	M7,
+	M8,
+	M9,
+	M10,
+	M11,
+	sampler_tx
+);
+input  b0;
+input  b1;
+input  b2;
+input  M0;
+input  M1;
+input  M2;
+input  M3;
+input  M4;
+input  M5;
+input  M6;
+input  M7;
+input  M8;
+input  M9;
+input  M10;
+input  M11;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(b0 or b1 or b2 or M0 or M1 or M2 or M3 or M4 or M5 or M6 or M7 or M8 or M9 or M10 or M11)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module SumadorReCompleto123_vlg_check_tst (
+	S_src0,
+	S_src1,
+	S_src2,
+	S_src3,
+	S_src4,
+	S_src5,
+	S_src6,
+	S_src7,
+	S_src8,
+	S_src9,
+	S_src10,
+	S_src11,
+	S_src12,
+	sampler_rx
+);
+input  S_src0;
+input  S_src1;
+input  S_src2;
+input  S_src3;
+input  S_src4;
+input  S_src5;
+input  S_src6;
+input  S_src7;
+input  S_src8;
+input  S_src9;
+input  S_src10;
+input  S_src11;
+input  S_src12;
+input sampler_rx;
+
+reg  S_src0_expected;
+reg  S_src1_expected;
+reg  S_src2_expected;
+reg  S_src3_expected;
+reg  S_src4_expected;
+reg  S_src5_expected;
+reg  S_src6_expected;
+reg  S_src7_expected;
+reg  S_src8_expected;
+reg  S_src9_expected;
+reg  S_src10_expected;
+reg  S_src11_expected;
+reg  S_src12_expected;
+
+reg  S_src0_prev;
+reg  S_src1_prev;
+reg  S_src2_prev;
+reg  S_src3_prev;
+reg  S_src4_prev;
+reg  S_src5_prev;
+reg  S_src6_prev;
+reg  S_src7_prev;
+reg  S_src8_prev;
+reg  S_src9_prev;
+reg  S_src10_prev;
+reg  S_src11_prev;
+reg  S_src12_prev;
+
+reg  S_src0_expected_prev;
+reg  S_src1_expected_prev;
+reg  S_src2_expected_prev;
+reg  S_src3_expected_prev;
+reg  S_src4_expected_prev;
+reg  S_src5_expected_prev;
+reg  S_src6_expected_prev;
+reg  S_src7_expected_prev;
+reg  S_src8_expected_prev;
+reg  S_src9_expected_prev;
+reg  S_src10_expected_prev;
+reg  S_src11_expected_prev;
+reg  S_src12_expected_prev;
+
+reg  last_S_src0_exp;
+reg  last_S_src1_exp;
+reg  last_S_src2_exp;
+reg  last_S_src3_exp;
+reg  last_S_src4_exp;
+reg  last_S_src5_exp;
+reg  last_S_src6_exp;
+reg  last_S_src7_exp;
+reg  last_S_src8_exp;
+reg  last_S_src9_exp;
+reg  last_S_src10_exp;
+reg  last_S_src11_exp;
+reg  last_S_src12_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:13] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 13'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	S_src0_prev = S_src0;
+	S_src1_prev = S_src1;
+	S_src2_prev = S_src2;
+	S_src3_prev = S_src3;
+	S_src4_prev = S_src4;
+	S_src5_prev = S_src5;
+	S_src6_prev = S_src6;
+	S_src7_prev = S_src7;
+	S_src8_prev = S_src8;
+	S_src9_prev = S_src9;
+	S_src10_prev = S_src10;
+	S_src11_prev = S_src11;
+	S_src12_prev = S_src12;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	S_src0_expected_prev = S_src0_expected;
+	S_src1_expected_prev = S_src1_expected;
+	S_src2_expected_prev = S_src2_expected;
+	S_src3_expected_prev = S_src3_expected;
+	S_src4_expected_prev = S_src4_expected;
+	S_src5_expected_prev = S_src5_expected;
+	S_src6_expected_prev = S_src6_expected;
+	S_src7_expected_prev = S_src7_expected;
+	S_src8_expected_prev = S_src8_expected;
+	S_src9_expected_prev = S_src9_expected;
+	S_src10_expected_prev = S_src10_expected;
+	S_src11_expected_prev = S_src11_expected;
+	S_src12_expected_prev = S_src12_expected;
+end
+
+
+
+// expected S_src0
+initial
+begin
+	S_src0_expected = 1'bX;
+end 
+
+// expected S_src1
+initial
+begin
+	S_src1_expected = 1'bX;
+end 
+
+// expected S_src2
+initial
+begin
+	S_src2_expected = 1'bX;
+end 
+
+// expected S_src3
+initial
+begin
+	S_src3_expected = 1'bX;
+end 
+
+// expected S_src4
+initial
+begin
+	S_src4_expected = 1'bX;
+end 
+
+// expected S_src5
+initial
+begin
+	S_src5_expected = 1'bX;
+end 
+
+// expected S_src6
+initial
+begin
+	S_src6_expected = 1'bX;
+end 
+
+// expected S_src7
+initial
+begin
+	S_src7_expected = 1'bX;
+end 
+
+// expected S_src8
+initial
+begin
+	S_src8_expected = 1'bX;
+end 
+
+// expected S_src9
+initial
+begin
+	S_src9_expected = 1'bX;
+end 
+
+// expected S_src10
+initial
+begin
+	S_src10_expected = 1'bX;
+end 
+
+// expected S_src11
+initial
+begin
+	S_src11_expected = 1'bX;
+end 
+
+// expected S_src12
+initial
+begin
+	S_src12_expected = 1'bX;
+end 
+// generate trigger
+always @(S_src0_expected or S_src0 or S_src1_expected or S_src1 or S_src2_expected or S_src2 or S_src3_expected or S_src3 or S_src4_expected or S_src4 or S_src5_expected or S_src5 or S_src6_expected or S_src6 or S_src7_expected or S_src7 or S_src8_expected or S_src8 or S_src9_expected or S_src9 or S_src10_expected or S_src10 or S_src11_expected or S_src11 or S_src12_expected or S_src12)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected S_src0 = %b | expected S_src1 = %b | expected S_src2 = %b | expected S_src3 = %b | expected S_src4 = %b | expected S_src5 = %b | expected S_src6 = %b | expected S_src7 = %b | expected S_src8 = %b | expected S_src9 = %b | expected S_src10 = %b | expected S_src11 = %b | expected S_src12 = %b | ",S_src0_expected_prev,S_src1_expected_prev,S_src2_expected_prev,S_src3_expected_prev,S_src4_expected_prev,S_src5_expected_prev,S_src6_expected_prev,S_src7_expected_prev,S_src8_expected_prev,S_src9_expected_prev,S_src10_expected_prev,S_src11_expected_prev,S_src12_expected_prev);
+	$display("| real S_src0 = %b | real S_src1 = %b | real S_src2 = %b | real S_src3 = %b | real S_src4 = %b | real S_src5 = %b | real S_src6 = %b | real S_src7 = %b | real S_src8 = %b | real S_src9 = %b | real S_src10 = %b | real S_src11 = %b | real S_src12 = %b | ",S_src0_prev,S_src1_prev,S_src2_prev,S_src3_prev,S_src4_prev,S_src5_prev,S_src6_prev,S_src7_prev,S_src8_prev,S_src9_prev,S_src10_prev,S_src11_prev,S_src12_prev);
+`endif
+	if (
+		( S_src0_expected_prev !== 1'bx ) && ( S_src0_prev !== S_src0_expected_prev )
+		&& ((S_src0_expected_prev !== last_S_src0_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src0_expected_prev);
+		$display ("     Real value = %b", S_src0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_S_src0_exp = S_src0_expected_prev;
+	end
+	if (
+		( S_src1_expected_prev !== 1'bx ) && ( S_src1_prev !== S_src1_expected_prev )
+		&& ((S_src1_expected_prev !== last_S_src1_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src1_expected_prev);
+		$display ("     Real value = %b", S_src1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_S_src1_exp = S_src1_expected_prev;
+	end
+	if (
+		( S_src2_expected_prev !== 1'bx ) && ( S_src2_prev !== S_src2_expected_prev )
+		&& ((S_src2_expected_prev !== last_S_src2_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src2_expected_prev);
+		$display ("     Real value = %b", S_src2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_S_src2_exp = S_src2_expected_prev;
+	end
+	if (
+		( S_src3_expected_prev !== 1'bx ) && ( S_src3_prev !== S_src3_expected_prev )
+		&& ((S_src3_expected_prev !== last_S_src3_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src3_expected_prev);
+		$display ("     Real value = %b", S_src3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_S_src3_exp = S_src3_expected_prev;
+	end
+	if (
+		( S_src4_expected_prev !== 1'bx ) && ( S_src4_prev !== S_src4_expected_prev )
+		&& ((S_src4_expected_prev !== last_S_src4_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src4 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src4_expected_prev);
+		$display ("     Real value = %b", S_src4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_S_src4_exp = S_src4_expected_prev;
+	end
+	if (
+		( S_src5_expected_prev !== 1'bx ) && ( S_src5_prev !== S_src5_expected_prev )
+		&& ((S_src5_expected_prev !== last_S_src5_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src5 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src5_expected_prev);
+		$display ("     Real value = %b", S_src5_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_S_src5_exp = S_src5_expected_prev;
+	end
+	if (
+		( S_src6_expected_prev !== 1'bx ) && ( S_src6_prev !== S_src6_expected_prev )
+		&& ((S_src6_expected_prev !== last_S_src6_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src6 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src6_expected_prev);
+		$display ("     Real value = %b", S_src6_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_S_src6_exp = S_src6_expected_prev;
+	end
+	if (
+		( S_src7_expected_prev !== 1'bx ) && ( S_src7_prev !== S_src7_expected_prev )
+		&& ((S_src7_expected_prev !== last_S_src7_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src7 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src7_expected_prev);
+		$display ("     Real value = %b", S_src7_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_S_src7_exp = S_src7_expected_prev;
+	end
+	if (
+		( S_src8_expected_prev !== 1'bx ) && ( S_src8_prev !== S_src8_expected_prev )
+		&& ((S_src8_expected_prev !== last_S_src8_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src8 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src8_expected_prev);
+		$display ("     Real value = %b", S_src8_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_S_src8_exp = S_src8_expected_prev;
+	end
+	if (
+		( S_src9_expected_prev !== 1'bx ) && ( S_src9_prev !== S_src9_expected_prev )
+		&& ((S_src9_expected_prev !== last_S_src9_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src9 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src9_expected_prev);
+		$display ("     Real value = %b", S_src9_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_S_src9_exp = S_src9_expected_prev;
+	end
+	if (
+		( S_src10_expected_prev !== 1'bx ) && ( S_src10_prev !== S_src10_expected_prev )
+		&& ((S_src10_expected_prev !== last_S_src10_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src10 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src10_expected_prev);
+		$display ("     Real value = %b", S_src10_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_S_src10_exp = S_src10_expected_prev;
+	end
+	if (
+		( S_src11_expected_prev !== 1'bx ) && ( S_src11_prev !== S_src11_expected_prev )
+		&& ((S_src11_expected_prev !== last_S_src11_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src11 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src11_expected_prev);
+		$display ("     Real value = %b", S_src11_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_S_src11_exp = S_src11_expected_prev;
+	end
+	if (
+		( S_src12_expected_prev !== 1'bx ) && ( S_src12_prev !== S_src12_expected_prev )
+		&& ((S_src12_expected_prev !== last_S_src12_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port S_src12 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", S_src12_expected_prev);
+		$display ("     Real value = %b", S_src12_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_S_src12_exp = S_src12_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module SumadorReCompleto123_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg b0;
+reg b1;
+reg b2;
+reg M0;
+reg M1;
+reg M2;
+reg M3;
+reg M4;
+reg M5;
+reg M6;
+reg M7;
+reg M8;
+reg M9;
+reg M10;
+reg M11;
+// wires                                               
+wire S_src0;
+wire S_src1;
+wire S_src2;
+wire S_src3;
+wire S_src4;
+wire S_src5;
+wire S_src6;
+wire S_src7;
+wire S_src8;
+wire S_src9;
+wire S_src10;
+wire S_src11;
+wire S_src12;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+SumadorReCompleto123 i1 (
+// port map - connection between master ports and signals/registers   
+	.b0(b0),
+	.b1(b1),
+	.b2(b2),
+	.M0(M0),
+	.M1(M1),
+	.M2(M2),
+	.M3(M3),
+	.M4(M4),
+	.M5(M5),
+	.M6(M6),
+	.M7(M7),
+	.M8(M8),
+	.M9(M9),
+	.M10(M10),
+	.M11(M11),
+	.S_src0(S_src0),
+	.S_src1(S_src1),
+	.S_src2(S_src2),
+	.S_src3(S_src3),
+	.S_src4(S_src4),
+	.S_src5(S_src5),
+	.S_src6(S_src6),
+	.S_src7(S_src7),
+	.S_src8(S_src8),
+	.S_src9(S_src9),
+	.S_src10(S_src10),
+	.S_src11(S_src11),
+	.S_src12(S_src12)
+);
+
+// b0
+initial
+begin
+	b0 = 1'b0;
+end 
+
+// b1
+initial
+begin
+	b1 = 1'b1;
+end 
+
+// b2
+initial
+begin
+	b2 = 1'b0;
+end 
+
+// M11
+always
+begin
+	M11 = 1'b0;
+	#1000000;
+end 
+
+// M10
+always
+begin
+	M10 = 1'b0;
+	#1000000;
+end 
+
+// M9
+always
+begin
+	M9 = 1'b0;
+	#1000000;
+end 
+
+// M8
+always
+begin
+	M8 = 1'b0;
+	#1000000;
+end 
+
+// M7
+always
+begin
+	M7 = 1'b0;
+	#1000000;
+end 
+
+// M6
+always
+begin
+	M6 = 1'b0;
+	#1000000;
+end 
+
+// M5
+always
+begin
+	M5 = 1'b0;
+	#1000000;
+end 
+
+// M4
+always
+begin
+	M4 = 1'b0;
+	M4 = #800000 1'b1;
+	#200000;
+end 
+
+// M3
+always
+begin
+	M3 = 1'b0;
+	M3 = #400000 1'b1;
+	M3 = #400000 1'b0;
+	#200000;
+end 
+
+// M2
+always
+begin
+	M2 = 1'b0;
+	M2 = #200000 1'b1;
+	M2 = #200000 1'b0;
+	M2 = #200000 1'b1;
+	M2 = #200000 1'b0;
+	#200000;
+end 
+
+// M1
+always
+begin
+	M1 = 1'b0;
+	M1 = #100000 1'b1;
+	# 100000;
+	repeat(3)
+	begin
+		M1 = 1'b0;
+		M1 = #100000 1'b1;
+		# 100000;
+	end
+	M1 = 1'b0;
+	M1 = #100000 1'b1;
+	#100000;
+end 
+
+// M0
+always
+begin
+	M0 = 1'b0;
+	M0 = #50000 1'b1;
+	# 50000;
+	repeat(8)
+	begin
+		M0 = 1'b0;
+		M0 = #50000 1'b1;
+		# 50000;
+	end
+	M0 = 1'b0;
+	M0 = #50000 1'b1;
+	#50000;
+end 
+
+SumadorReCompleto123_vlg_sample_tst tb_sample (
+	.b0(b0),
+	.b1(b1),
+	.b2(b2),
+	.M0(M0),
+	.M1(M1),
+	.M2(M2),
+	.M3(M3),
+	.M4(M4),
+	.M5(M5),
+	.M6(M6),
+	.M7(M7),
+	.M8(M8),
+	.M9(M9),
+	.M10(M10),
+	.M11(M11),
+	.sampler_tx(sampler)
+);
+
+SumadorReCompleto123_vlg_check_tst tb_out(
+	.S_src0(S_src0),
+	.S_src1(S_src1),
+	.S_src2(S_src2),
+	.S_src3(S_src3),
+	.S_src4(S_src4),
+	.S_src5(S_src5),
+	.S_src6(S_src6),
+	.S_src7(S_src7),
+	.S_src8(S_src8),
+	.S_src9(S_src9),
+	.S_src10(S_src10),
+	.S_src11(S_src11),
+	.S_src12(S_src12),
+	.sampler_rx(sampler)
+);
+endmodule
+

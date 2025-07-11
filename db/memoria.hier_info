@@ -1,0 +1,326 @@
+|SumadorReCompleto123
+S_src0 <= SemiSumador:inst.S_ss
+M0 => SemiSumador:inst.A_ss
+b0 => SemiSumador:inst.B_ss
+S_src1 <= SumadorCompleto:inst1.S_sc
+M1 => SumadorCompleto:inst1.A_sc
+S_src2 <= SumadorCompleto:inst2.S_sc
+M2 => SumadorCompleto:inst2.A_sc
+b2 => SumadorCompleto:inst2.B_sc
+S_src3 <= SumadorCompleto:inst3.S_sc
+M3 => SumadorCompleto:inst3.A_sc
+S_src4 <= SumadorCompleto:inst4.S_sc
+M4 => SumadorCompleto:inst4.A_sc
+S_src5 <= SumadorCompleto:inst5.S_sc
+M5 => SumadorCompleto:inst5.A_sc
+S_src6 <= SumadorCompleto:inst6.S_sc
+M6 => SumadorCompleto:inst6.A_sc
+S_src7 <= SumadorCompleto:inst7.S_sc
+M7 => SumadorCompleto:inst7.A_sc
+S_src8 <= SumadorCompleto:inst8.S_sc
+M8 => SumadorCompleto:inst8.A_sc
+S_src10 <= SumadorCompleto:inst10.S_sc
+M10 => SumadorCompleto:inst10.A_sc
+M9 => SumadorCompleto:inst9.A_sc
+S_src9 <= SumadorCompleto:inst9.S_sc
+S_src11 <= SumadorCompleto:inst11.S_sc
+M11 => SumadorCompleto:inst11.A_sc
+S_src12 <= SumadorCompleto:inst11.CryOut_sc
+b1 => ~NO_FANOUT~
+
+
+|SumadorReCompleto123|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst1
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst1|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst1|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst2
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst2|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst2|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst3
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst3|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst3|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst4
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst4|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst4|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst5
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst5|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst5|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst6
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst6|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst6|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst7
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst7|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst7|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst8
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst8|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst8|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst10
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst10|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst10|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst9
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst9|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst9|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst11
+S_sc <= SemiSumador:inst3.S_ss
+A_sc => SemiSumador:inst.A_ss
+B_sc => SemiSumador:inst.B_ss
+CryIn_sc => SemiSumador:inst3.B_ss
+CryOut_sc <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst11|SemiSumador:inst3
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SumadorReCompleto123|SumadorCompleto:inst11|SemiSumador:inst
+CryOut_ss <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A_ss => inst.IN0
+A_ss => inst10.IN0
+B_ss => inst.IN1
+B_ss => inst10.IN1
+S_ss <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+
+
