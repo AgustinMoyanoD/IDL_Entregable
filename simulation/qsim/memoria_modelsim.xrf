@@ -9,6 +9,7 @@ source_file = 1, C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/SumadorReComp
 source_file = 1, Waveform3.vwf
 source_file = 1, C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/main.bdf
 source_file = 1, C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/Comparador12bits.bdf
+source_file = 1, C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/compa2bits.bdf
 source_file = 1, C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/db/memoria.cbx.xml
 design_name = memoria
 instance = comp, \out11~output , out11~output, memoria, 1
