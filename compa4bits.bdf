@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 336 360 504 376)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A0" (rect 5 0 18 12)(font "Arial" ))
+	(text "A0" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect 336 376 504 392)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A1" (rect 5 0 18 12)(font "Arial" ))
+	(text "A1" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ applicable agreement for further details.
 	(input)
 	(rect 336 392 504 408)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "B1" (rect 5 0 18 12)(font "Arial" ))
+	(text "B1" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -119,7 +119,7 @@ applicable agreement for further details.
 	(input)
 	(rect 336 216 504 232)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "A3" (rect 5 0 18 12)(font "Arial" ))
+	(text "A3" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -135,7 +135,7 @@ applicable agreement for further details.
 	(input)
 	(rect 336 232 504 248)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "B3" (rect 5 0 18 12)(font "Arial" ))
+	(text "B3" (rect 5 0 17 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -577,14 +577,6 @@ applicable agreement for further details.
 	(pt 664 368)
 )
 (connector
-	(pt 664 416)
-	(pt 704 416)
-)
-(connector
-	(pt 664 368)
-	(pt 664 416)
-)
-(connector
 	(pt 704 432)
 	(pt 696 432)
 )
@@ -595,14 +587,6 @@ applicable agreement for further details.
 (connector
 	(pt 640 384)
 	(pt 640 432)
-)
-(connector
-	(pt 696 432)
-	(pt 696 384)
-)
-(connector
-	(pt 704 384)
-	(pt 696 384)
 )
 (connector
 	(pt 600 352)
@@ -695,6 +679,22 @@ applicable agreement for further details.
 (connector
 	(pt 768 232)
 	(pt 808 232)
+)
+(connector
+	(pt 696 432)
+	(pt 696 384)
+)
+(connector
+	(pt 704 384)
+	(pt 696 384)
+)
+(connector
+	(pt 704 416)
+	(pt 664 416)
+)
+(connector
+	(pt 664 368)
+	(pt 664 416)
 )
 (junction (pt 640 240))
 (junction (pt 640 192))
