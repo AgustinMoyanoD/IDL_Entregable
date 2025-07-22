@@ -232,7 +232,7 @@ applicable agreement for further details.
 	(input)
 	(rect 200 -104 216 64)
 	(text "INPUT" (rect 0 125 10 153)(font "Arial" (font_size 6))(vertical))
-	(text "enable_read" (rect 0 5 12 65)(font "Arial" )(vertical))
+	(text "enable_read" (rect 0 5 12 64)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 12 84)(pt 12 109))
@@ -1313,6 +1313,102 @@ applicable agreement for further details.
 	(pt 240 552)
 	(pt 240 648)
 )
+(connector
+	(pt 480 208)
+	(pt 704 208)
+)
+(connector
+	(pt 480 304)
+	(pt 704 304)
+)
+(connector
+	(pt 480 400)
+	(pt 704 400)
+)
+(connector
+	(pt 480 496)
+	(pt 704 496)
+)
+(connector
+	(pt 480 592)
+	(pt 704 592)
+)
+(connector
+	(pt 480 688)
+	(pt 704 688)
+)
+(connector
+	(pt 480 784)
+	(pt 704 784)
+)
+(connector
+	(pt 480 880)
+	(pt 704 880)
+)
+(connector
+	(pt 480 976)
+	(pt 704 976)
+)
+(connector
+	(pt 480 1072)
+	(pt 704 1072)
+)
+(connector
+	(pt 480 1168)
+	(pt 704 1168)
+)
+(connector
+	(pt 704 112)
+	(pt 704 208)
+)
+(connector
+	(pt 704 208)
+	(pt 704 304)
+)
+(connector
+	(pt 704 304)
+	(pt 704 400)
+)
+(connector
+	(pt 704 400)
+	(pt 704 496)
+)
+(connector
+	(pt 704 496)
+	(pt 704 592)
+)
+(connector
+	(pt 704 592)
+	(pt 704 688)
+)
+(connector
+	(pt 704 688)
+	(pt 704 784)
+)
+(connector
+	(pt 704 784)
+	(pt 704 880)
+)
+(connector
+	(pt 704 880)
+	(pt 704 976)
+)
+(connector
+	(pt 704 976)
+	(pt 704 1072)
+)
+(connector
+	(pt 704 1072)
+	(pt 704 1168)
+)
+(connector
+	(pt 480 112)
+	(pt 704 112)
+)
+(connector
+	(pt 704 112)
+	(pt 752 112)
+)
 (junction (pt 240 648))
 (junction (pt 240 744))
 (junction (pt 240 840))
@@ -1335,3 +1431,14 @@ applicable agreement for further details.
 (junction (pt 240 360))
 (junction (pt 240 456))
 (junction (pt 240 552))
+(junction (pt 704 208))
+(junction (pt 704 304))
+(junction (pt 704 400))
+(junction (pt 704 496))
+(junction (pt 704 592))
+(junction (pt 704 688))
+(junction (pt 704 784))
+(junction (pt 704 880))
+(junction (pt 704 976))
+(junction (pt 704 1072))
+(junction (pt 704 112))
