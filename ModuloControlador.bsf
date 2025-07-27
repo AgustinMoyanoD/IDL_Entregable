@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 224 272)
+	(rect 16 16 224 304)
 	(text "ModuloControlador" (rect 5 0 111 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 240 25 252)(font "Arial" ))
+	(text "inst" (rect 8 272 25 284)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -75,8 +75,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 144)
 		(input)
-		(text "FinCuenta" (rect 0 0 56 14)(font "Arial" (font_size 8)))
-		(text "FinCuenta" (rect 21 139 77 153)(font "Arial" (font_size 8)))
+		(text "M_FinCuenta" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "M_FinCuenta" (rect 21 139 94 153)(font "Arial" (font_size 8)))
 		(line (pt 0 144)(pt 16 144))
 	)
 	(port
@@ -103,9 +103,23 @@ applicable agreement for further details.
 	(port
 		(pt 0 208)
 		(input)
-		(text "ErrorInput" (rect 0 0 55 14)(font "Arial" (font_size 8)))
-		(text "ErrorInput" (rect 21 203 76 217)(font "Arial" (font_size 8)))
+		(text "M_UpDown" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "M_UpDown" (rect 21 203 87 217)(font "Arial" (font_size 8)))
 		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "M_Mayor" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "M_Mayor" (rect 21 219 72 233)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "M_Menor" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "M_Menor" (rect 21 235 72 249)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 16 240))
 	)
 	(port
 		(pt 208 32)
@@ -143,6 +157,6 @@ applicable agreement for further details.
 		(line (pt 208 96)(pt 192 96))
 	)
 	(drawing
-		(rectangle (rect 16 16 192 240))
+		(rectangle (rect 16 16 192 272))
 	)
 )

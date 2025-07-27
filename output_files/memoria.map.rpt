@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memoria
-Sat Jul 26 16:32:07 2025
+Sun Jul 27 10:58:36 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -41,16 +41,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jul 26 16:32:07 2025      ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 27 10:58:36 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; memoria                                    ;
 ; Top-level Entity Name              ; ModuloControlador                          ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 17                                         ;
-;     Total combinational functions  ; 17                                         ;
+; Total logic elements               ; 18                                         ;
+;     Total combinational functions  ; 18                                         ;
 ;     Dedicated logic registers      ; 3                                          ;
 ; Total registers                    ; 3                                          ;
-; Total pins                         ; 17                                         ;
+; Total pins                         ; 19                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -176,12 +176,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 17               ;
+; I/O pins                 ; 19               ;
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; inst7            ;
-; Maximum fan-out          ; 10               ;
-; Total fan-out            ; 92               ;
-; Average fan-out          ; 1.70             ;
+; Maximum fan-out          ; 8                ;
+; Total fan-out            ; 97               ;
+; Average fan-out          ; 1.64             ;
 +--------------------------+------------------+
 
 
@@ -190,10 +190,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; |ModuloControlador         ; 17 (6)            ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 17   ; 0            ; |ModuloControlador                     ; work         ;
-;    |ControllerD0:inst8|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD0:inst8  ; work         ;
+; |ModuloControlador         ; 18 (7)            ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 19   ; 0            ; |ModuloControlador                     ; work         ;
+;    |ControllerD0:inst8|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD0:inst8  ; work         ;
 ;    |ControllerD1:inst9|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD1:inst9  ; work         ;
-;    |ControllerD2:inst10|   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD2:inst10 ; work         ;
+;    |ControllerD2:inst10|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD2:inst10 ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -228,7 +228,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Jul 26 16:32:05 2025
+    Info: Processing started: Sun Jul 27 10:58:32 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IDL_Integrador -c memoria
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memoria.bdf
@@ -272,14 +272,14 @@ Warning (275011): Block or symbol "NOT" of instance "inst20" overlaps another bl
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
+Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 17 logic cells
+    Info (21061): Implemented 18 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Sat Jul 26 16:32:07 2025
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4665 megabytes
+    Info: Processing ended: Sun Jul 27 10:58:36 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 
