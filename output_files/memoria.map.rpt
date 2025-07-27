@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memoria
-Sun Jul 27 10:58:36 2025
+Sun Jul 27 13:00:13 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,9 +13,13 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: lpm_mux0:inst3|LPM_MUX:LPM_MUX_component
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +45,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jul 27 10:58:36 2025      ;
+; Analysis & Synthesis Status        ; Successful - Sun Jul 27 13:00:13 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; memoria                                    ;
-; Top-level Entity Name              ; ModuloControlador                          ;
+; Top-level Entity Name              ; Incrementador                              ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 18                                         ;
-;     Total combinational functions  ; 18                                         ;
-;     Dedicated logic registers      ; 3                                          ;
-; Total registers                    ; 3                                          ;
-; Total pins                         ; 19                                         ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 31                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -67,7 +71,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; ModuloControlador  ; memoria            ;
+; Top-level entity name                                                      ; Incrementador      ; memoria            ;
 ; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -159,43 +163,91 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; ControllerD2.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/ControllerD2.bdf      ;         ;
-; ControllerD1.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/ControllerD1.bdf      ;         ;
-; ControllerD0.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/ControllerD0.bdf      ;         ;
-; ModuloControlador.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/ModuloControlador.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; memoria.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/memoria.bdf                 ;         ;
+; SemiSumador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/SemiSumador.bdf             ;         ;
+; SumadorCompleto.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/SumadorCompleto.bdf         ;         ;
+; SumadorReCompleto123.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/SumadorReCompleto123.bdf    ;         ;
+; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/lpm_mux0.vhd                ;         ;
+; Incrementador.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/Incrementador.bdf           ;         ;
+; MaquinaControlMultiplex.bdf      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/MaquinaControlMultiplex.bdf ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; e:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                      ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                       ; e:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                                   ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; e:/altera/13.1/quartus/libraries/megafunctions/muxlut.inc                                                       ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; e:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc                                                     ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; e:/altera/13.1/quartus/libraries/megafunctions/altshift.inc                                                     ;         ;
+; db/mux_uce.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/db/mux_uce.tdf              ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 19               ;
-; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; inst7            ;
-; Maximum fan-out          ; 8                ;
-; Total fan-out            ; 97               ;
-; Average fan-out          ; 1.64             ;
-+--------------------------+------------------+
++----------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary  ;
++--------------------------+-------------------+
+; Resource                 ; Usage             ;
++--------------------------+-------------------+
+; I/O pins                 ; 31                ;
+; DSP block 9-bit elements ; 0                 ;
+; Maximum fan-out node     ; CarryFinal~output ;
+; Maximum fan-out          ; 1                 ;
+; Total fan-out            ; 32                ;
+; Average fan-out          ; 0.52              ;
++--------------------------+-------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; |ModuloControlador         ; 18 (7)            ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 19   ; 0            ; |ModuloControlador                     ; work         ;
-;    |ControllerD0:inst8|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD0:inst8  ; work         ;
-;    |ControllerD1:inst9|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD1:inst9  ; work         ;
-;    |ControllerD2:inst10|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |ModuloControlador|ControllerD2:inst10 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |Incrementador             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 31   ; 0            ; |Incrementador      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+-------------------------------+--------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance               ; IP Include File                                                                                  ;
++--------+--------------+---------+--------------+--------------+-------------------------------+--------------------------------------------------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |Incrementador|lpm_mux0:inst3 ; C:/Users/Usuario/Desktop/Folders/Facultad/1erCuatri2025/DiseñoLogico/IDL_Entregable/lpm_mux0.vhd ;
++--------+--------------+---------+--------------+--------------+-------------------------------+--------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                            ;
++----------------------------------------+--------------------------------------+
+; Register name                          ; Reason for Removal                   ;
++----------------------------------------+--------------------------------------+
+; memoria:inst1|inst                     ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst3                    ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst4                    ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst5                    ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst6                    ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst7                    ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst8                    ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst9                    ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst10                   ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst11                   ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst13                   ; Stuck at GND due to stuck port clock ;
+; memoria:inst1|inst12                   ; Stuck at GND due to stuck port clock ;
+; MaquinaControlMultiplex:inst2|inst6    ; Lost fanout                          ;
+; MaquinaControlMultiplex:inst2|inst7    ; Lost fanout                          ;
+; Total Number of Removed Registers = 14 ;                                      ;
++----------------------------------------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++----------------------+-------------------------+--------------------------------------------------------------------------+
+; Register name        ; Reason for Removal      ; Registers Removed due to This Register                                   ;
++----------------------+-------------------------+--------------------------------------------------------------------------+
+; memoria:inst1|inst11 ; Stuck at GND            ; MaquinaControlMultiplex:inst2|inst6, MaquinaControlMultiplex:inst2|inst7 ;
+;                      ; due to stuck port clock ;                                                                          ;
++----------------------+-------------------------+--------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -203,14 +255,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux0:inst3|LPM_MUX:LPM_MUX_component ;
++------------------------+---------------+----------------------------------------------+
+; Parameter Name         ; Value         ; Type                                         ;
++------------------------+---------------+----------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                               ;
+; LPM_WIDTH              ; 12            ; Signed Integer                               ;
+; LPM_SIZE               ; 2             ; Signed Integer                               ;
+; LPM_WIDTHS             ; 1             ; Signed Integer                               ;
+; LPM_PIPELINE           ; 0             ; Signed Integer                               ;
+; CBXI_PARAMETER         ; mux_uce       ; Untyped                                      ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                      ;
++------------------------+---------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -228,7 +299,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Jul 27 10:58:32 2025
+    Info: Processing started: Sun Jul 27 13:00:10 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IDL_Integrador -c memoria
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memoria.bdf
@@ -239,8 +310,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file sumador
     Info (12023): Found entity 1: SumadorCompleto
 Info (12021): Found 1 design units, including 1 entities, in source file sumadorrecompleto123.bdf
     Info (12023): Found entity 1: SumadorReCompleto123
-Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
-    Info (12023): Found entity 1: main
+Warning (12019): Can't analyze file -- file main.bdf is missing
 Info (12021): Found 1 design units, including 1 entities, in source file compa2bits.bdf
     Info (12023): Found entity 1: compa2bits
 Info (12021): Found 1 design units, including 1 entities, in source file compa4bits.bdf
@@ -259,27 +329,98 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: ControllerD0
 Info (12021): Found 1 design units, including 1 entities, in source file modulocontrolador.bdf
     Info (12023): Found entity 1: ModuloControlador
-Info (12127): Elaborating entity "ModuloControlador" for the top level hierarchy
-Warning (275011): Block or symbol "AND3" of instance "inst11" overlaps another block or symbol
-Info (12128): Elaborating entity "ControllerD2" for hierarchy "ControllerD2:inst10"
-Warning (275011): Block or symbol "NOT" of instance "inst13" overlaps another block or symbol
-Info (12128): Elaborating entity "ControllerD1" for hierarchy "ControllerD1:inst9"
-Warning (275011): Block or symbol "NOT" of instance "inst11" overlaps another block or symbol
-Info (12128): Elaborating entity "ControllerD0" for hierarchy "ControllerD0:inst8"
-Warning (275011): Block or symbol "OR2" of instance "inst9" overlaps another block or symbol
-Warning (275011): Block or symbol "NOT" of instance "inst10" overlaps another block or symbol
-Warning (275011): Block or symbol "NOT" of instance "inst20" overlaps another block or symbol
-Info (286030): Timing-Driven Synthesis is running
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_mux0.vhd
+    Info (12022): Found design unit 1: lpm_mux0-SYN
+    Info (12023): Found entity 1: lpm_mux0
+Info (12021): Found 1 design units, including 1 entities, in source file incrementador.bdf
+    Info (12023): Found entity 1: Incrementador
+Info (12021): Found 1 design units, including 1 entities, in source file maquinacontrolmultiplex.bdf
+    Info (12023): Found entity 1: MaquinaControlMultiplex
+Info (12127): Elaborating entity "Incrementador" for the top level hierarchy
+Warning (275013): Port "CLK" of type memoria and instance "inst1" is missing source signal
+Warning (275043): Pin "ou0" is missing source
+Warning (275043): Pin "ou1" is missing source
+Warning (275043): Pin "ou3" is missing source
+Warning (275043): Pin "ou4" is missing source
+Warning (275043): Pin "ou5" is missing source
+Warning (275043): Pin "ou6" is missing source
+Warning (275043): Pin "ou7" is missing source
+Warning (275043): Pin "ou8" is missing source
+Warning (275043): Pin "ou9" is missing source
+Warning (275043): Pin "ou10" is missing source
+Warning (275043): Pin "ou11" is missing source
+Info (12128): Elaborating entity "SumadorReCompleto123" for hierarchy "SumadorReCompleto123:inst"
+Warning (275011): Block or symbol "SemiSumador" of instance "inst" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst1" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst2" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst3" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst4" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst5" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst6" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst7" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst8" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst9" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst10" overlaps another block or symbol
+Warning (275011): Block or symbol "SumadorCompleto" of instance "inst11" overlaps another block or symbol
+Warning (275009): Pin "b1" not connected
+Info (12128): Elaborating entity "SemiSumador" for hierarchy "SumadorReCompleto123:inst|SemiSumador:inst"
+Info (12128): Elaborating entity "SumadorCompleto" for hierarchy "SumadorReCompleto123:inst|SumadorCompleto:inst1"
+Info (12128): Elaborating entity "memoria" for hierarchy "memoria:inst1"
+Info (12128): Elaborating entity "MaquinaControlMultiplex" for hierarchy "MaquinaControlMultiplex:inst2"
+Info (12128): Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:inst3"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "12"
+    Info (12134): Parameter "LPM_SIZE" = "2"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_uce.tdf
+    Info (12023): Found entity 1: mux_uce
+Info (12128): Elaborating entity "mux_uce" for hierarchy "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component|mux_uce:auto_generated"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "CarryFinal" is stuck at GND
+    Warning (13410): Pin "ou0" is stuck at GND
+    Warning (13410): Pin "ou1" is stuck at GND
+    Warning (13410): Pin "ou3" is stuck at GND
+    Warning (13410): Pin "ou4" is stuck at GND
+    Warning (13410): Pin "ou5" is stuck at GND
+    Warning (13410): Pin "ou6" is stuck at GND
+    Warning (13410): Pin "ou7" is stuck at GND
+    Warning (13410): Pin "ou8" is stuck at GND
+    Warning (13410): Pin "ou9" is stuck at GND
+    Warning (13410): Pin "ou10" is stuck at GND
+    Warning (13410): Pin "ou11" is stuck at GND
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 18 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4665 megabytes
-    Info: Processing ended: Sun Jul 27 10:58:36 2025
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "b0"
+    Warning (15610): No output dependent on input pin "ActivarConteo"
+    Warning (15610): No output dependent on input pin "ClockIn"
+    Warning (15610): No output dependent on input pin "ResetFFIn"
+    Warning (15610): No output dependent on input pin "data11"
+    Warning (15610): No output dependent on input pin "data10"
+    Warning (15610): No output dependent on input pin "data9"
+    Warning (15610): No output dependent on input pin "data8"
+    Warning (15610): No output dependent on input pin "data7"
+    Warning (15610): No output dependent on input pin "data6"
+    Warning (15610): No output dependent on input pin "data5"
+    Warning (15610): No output dependent on input pin "data4"
+    Warning (15610): No output dependent on input pin "data3"
+    Warning (15610): No output dependent on input pin "data2"
+    Warning (15610): No output dependent on input pin "data1"
+    Warning (15610): No output dependent on input pin "Data0"
+    Warning (15610): No output dependent on input pin "b1"
+Info (21057): Implemented 31 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 13 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 4726 megabytes
+    Info: Processing ended: Sun Jul 27 13:00:13 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

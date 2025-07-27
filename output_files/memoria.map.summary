@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Jul 27 10:58:36 2025
+Analysis & Synthesis Status : Successful - Sun Jul 27 13:00:13 2025
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : memoria
-Top-level Entity Name : ModuloControlador
+Top-level Entity Name : Incrementador
 Family : Cyclone IV GX
-Total logic elements : 18
-    Total combinational functions : 18
-    Dedicated logic registers : 3
-Total registers : 3
-Total pins : 19
+Total logic elements : 0
+    Total combinational functions : 0
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 31
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
