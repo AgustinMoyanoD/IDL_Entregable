@@ -18,38 +18,70 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/22/2025 14:29:10"
+// Generated on "07/28/2025 18:02:22"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    compa4bits
+// Verilog Self-Checking Test Bench (with test vectors) for design :    comparador12
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module compa4bits_vlg_sample_tst(
+module comparador12_vlg_sample_tst(
 	A0,
 	A1,
 	A2,
 	A3,
+	A4,
+	A5,
+	A6,
+	A7,
+	A8,
+	A9,
+	A10,
+	A11,
 	B0,
 	B1,
 	B2,
 	B3,
+	B4,
+	B5,
+	B6,
+	B7,
+	B8,
+	B9,
+	B10,
+	B11,
 	sampler_tx
 );
 input  A0;
 input  A1;
 input  A2;
 input  A3;
+input  A4;
+input  A5;
+input  A6;
+input  A7;
+input  A8;
+input  A9;
+input  A10;
+input  A11;
 input  B0;
 input  B1;
 input  B2;
 input  B3;
+input  B4;
+input  B5;
+input  B6;
+input  B7;
+input  B8;
+input  B9;
+input  B10;
+input  B11;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(A0 or A1 or A2 or A3 or B0 or B1 or B2 or B3)
+always @(A0 or A1 or A2 or A3 or A4 or A5 or A6 or A7 or A8 or A9 or A10 or A11 or B0 or B1 or B2 or B3 or B4 or B5 or B6 or B7 or B8 or B9 or B10 or B11)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -68,7 +100,7 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module compa4bits_vlg_check_tst (
+module comparador12_vlg_check_tst (
 	igual,
 	mayor,
 	menor,
@@ -217,17 +249,33 @@ $finish;
 end 
 endmodule
 
-module compa4bits_vlg_vec_tst();
+module comparador12_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg A0;
 reg A1;
 reg A2;
 reg A3;
+reg A4;
+reg A5;
+reg A6;
+reg A7;
+reg A8;
+reg A9;
+reg A10;
+reg A11;
 reg B0;
 reg B1;
 reg B2;
 reg B3;
+reg B4;
+reg B5;
+reg B6;
+reg B7;
+reg B8;
+reg B9;
+reg B10;
+reg B11;
 // wires                                               
 wire igual;
 wire mayor;
@@ -236,16 +284,32 @@ wire menor;
 wire sampler;                             
 
 // assign statements (if any)                          
-compa4bits i1 (
+comparador12 i1 (
 // port map - connection between master ports and signals/registers   
 	.A0(A0),
 	.A1(A1),
 	.A2(A2),
 	.A3(A3),
+	.A4(A4),
+	.A5(A5),
+	.A6(A6),
+	.A7(A7),
+	.A8(A8),
+	.A9(A9),
+	.A10(A10),
+	.A11(A11),
 	.B0(B0),
 	.B1(B1),
 	.B2(B2),
 	.B3(B3),
+	.B4(B4),
+	.B5(B5),
+	.B6(B6),
+	.B7(B7),
+	.B8(B8),
+	.B9(B9),
+	.B10(B10),
+	.B11(B11),
 	.igual(igual),
 	.mayor(mayor),
 	.menor(menor)
@@ -254,90 +318,176 @@ compa4bits i1 (
 // A0
 initial
 begin
-	A0 = 1'b0;
+	A0 = 1'b1;
 end 
 
 // A1
 initial
 begin
-	A1 = 1'b0;
-	A1 = #640000 1'b1;
+	A1 = 1'b1;
 end 
 
 // A2
 initial
 begin
-	A2 = 1'b0;
-	A2 = #320000 1'b1;
-	A2 = #320000 1'b0;
-	A2 = #320000 1'b1;
+	A2 = 1'b1;
 end 
 
 // A3
 initial
 begin
-	repeat(3)
-	begin
-		A3 = 1'b0;
-		A3 = #160000 1'b1;
-		# 160000;
-	end
-	A3 = 1'b0;
+	A3 = 1'b1;
+end 
+
+// A4
+initial
+begin
+	A4 = 1'b1;
+end 
+
+// A5
+initial
+begin
+	A5 = 1'b1;
+end 
+
+// A6
+initial
+begin
+	A6 = 1'b1;
+end 
+
+// A7
+initial
+begin
+	A7 = 1'b1;
+end 
+
+// A8
+initial
+begin
+	A8 = 1'b0;
+end 
+
+// A9
+initial
+begin
+	A9 = 1'b0;
+end 
+
+// A10
+initial
+begin
+	A10 = 1'b0;
+end 
+
+// A11
+initial
+begin
+	A11 = 1'b0;
 end 
 
 // B0
 initial
 begin
-	repeat(6)
-	begin
-		B0 = 1'b0;
-		B0 = #80000 1'b1;
-		# 80000;
-	end
 	B0 = 1'b0;
 end 
 
 // B1
 initial
 begin
-	repeat(12)
-	begin
-		B1 = 1'b0;
-		B1 = #40000 1'b1;
-		# 40000;
-	end
 	B1 = 1'b0;
 end 
 
 // B2
-always
+initial
 begin
 	B2 = 1'b0;
-	B2 = #20000 1'b1;
-	#20000;
 end 
 
 // B3
-always
+initial
 begin
 	B3 = 1'b0;
-	B3 = #10000 1'b1;
-	#10000;
 end 
 
-compa4bits_vlg_sample_tst tb_sample (
+// B4
+initial
+begin
+	B4 = 1'b0;
+end 
+
+// B5
+initial
+begin
+	B5 = 1'b0;
+end 
+
+// B6
+initial
+begin
+	B6 = 1'b0;
+end 
+
+// B7
+initial
+begin
+	B7 = 1'b1;
+end 
+
+// B8
+initial
+begin
+	B8 = 1'b1;
+end 
+
+// B9
+initial
+begin
+	B9 = 1'b0;
+end 
+
+// B10
+initial
+begin
+	B10 = 1'b0;
+end 
+
+// B11
+initial
+begin
+	B11 = 1'b0;
+end 
+
+comparador12_vlg_sample_tst tb_sample (
 	.A0(A0),
 	.A1(A1),
 	.A2(A2),
 	.A3(A3),
+	.A4(A4),
+	.A5(A5),
+	.A6(A6),
+	.A7(A7),
+	.A8(A8),
+	.A9(A9),
+	.A10(A10),
+	.A11(A11),
 	.B0(B0),
 	.B1(B1),
 	.B2(B2),
 	.B3(B3),
+	.B4(B4),
+	.B5(B5),
+	.B6(B6),
+	.B7(B7),
+	.B8(B8),
+	.B9(B9),
+	.B10(B10),
+	.B11(B11),
 	.sampler_tx(sampler)
 );
 
-compa4bits_vlg_check_tst tb_out(
+comparador12_vlg_check_tst tb_out(
 	.igual(igual),
 	.mayor(mayor),
 	.menor(menor),
