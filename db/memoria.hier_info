@@ -20,18 +20,19 @@ data1 => lpm_mux0:inst3.data0x[1]
 Data0 => lpm_mux0:inst3.data0x[0]
 b1 => SumadorReCompleto123:inst.b1
 b2 => SumadorReCompleto123:inst.b2
+signob => SumadorReCompleto123:inst.b11
 ou0 <= Incremento[0].DB_MAX_OUTPUT_PORT_TYPE
-ou1 <= <GND>
+ou1 <= Incremento[1].DB_MAX_OUTPUT_PORT_TYPE
 ou2 <= Incremento[2].DB_MAX_OUTPUT_PORT_TYPE
-ou3 <= <GND>
-ou4 <= <GND>
-ou5 <= <GND>
-ou6 <= <GND>
-ou7 <= <GND>
-ou8 <= <GND>
-ou9 <= <GND>
-ou10 <= <GND>
-ou11 <= <GND>
+ou3 <= Incremento[3].DB_MAX_OUTPUT_PORT_TYPE
+ou4 <= Incremento[4].DB_MAX_OUTPUT_PORT_TYPE
+ou5 <= Incremento[5].DB_MAX_OUTPUT_PORT_TYPE
+ou6 <= Incremento[6].DB_MAX_OUTPUT_PORT_TYPE
+ou7 <= Incremento[7].DB_MAX_OUTPUT_PORT_TYPE
+ou8 <= Incremento[8].DB_MAX_OUTPUT_PORT_TYPE
+ou9 <= Incremento[9].DB_MAX_OUTPUT_PORT_TYPE
+ou10 <= Incremento[10].DB_MAX_OUTPUT_PORT_TYPE
+ou11 <= Incremento[11].DB_MAX_OUTPUT_PORT_TYPE
 enableWrite <= MaquinaControlMultiplex:inst2.activarMemoria
 selectSel <= MaquinaControlMultiplex:inst2.seleccionarEntrada
 
@@ -42,6 +43,7 @@ M0 => SemiSumador:inst.A_ss
 b0 => SemiSumador:inst.B_ss
 S_src1 <= SumadorCompleto:inst1.S_sc
 M1 => SumadorCompleto:inst1.A_sc
+b1 => SumadorCompleto:inst1.B_sc
 S_src2 <= SumadorCompleto:inst2.S_sc
 M2 => SumadorCompleto:inst2.A_sc
 b2 => SumadorCompleto:inst2.B_sc
@@ -73,7 +75,6 @@ S_src11 <= SumadorCompleto:inst11.S_sc
 M11 => SumadorCompleto:inst11.A_sc
 b11 => SumadorCompleto:inst11.B_sc
 S_src12 <= SumadorCompleto:inst11.CryOut_sc
-b1 => ~NO_FANOUT~
 
 
 |Incrementador|SumadorReCompleto123:inst|SemiSumador:inst

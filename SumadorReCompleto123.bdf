@@ -71,7 +71,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -824 416 -656 432)
+	(rect -832 416 -664 432)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "b1" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
@@ -275,7 +275,7 @@ applicable agreement for further details.
 	(input)
 	(rect -464 608 -296 624)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b3" (rect 5 0 17 12)(font "Arial" ))
+	(text "b3" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -291,7 +291,7 @@ applicable agreement for further details.
 	(input)
 	(rect -280 704 -112 720)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b4" (rect 5 0 17 12)(font "Arial" ))
+	(text "b4" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -307,7 +307,7 @@ applicable agreement for further details.
 	(input)
 	(rect -96 800 72 816)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b5" (rect 5 0 17 12)(font "Arial" ))
+	(text "b5" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -323,7 +323,7 @@ applicable agreement for further details.
 	(input)
 	(rect 80 888 248 904)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b6" (rect 5 0 17 12)(font "Arial" ))
+	(text "b6" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -339,7 +339,7 @@ applicable agreement for further details.
 	(input)
 	(rect 264 984 432 1000)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b7" (rect 5 0 17 12)(font "Arial" ))
+	(text "b7" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -355,7 +355,7 @@ applicable agreement for further details.
 	(input)
 	(rect 448 1080 616 1096)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b8" (rect 5 0 17 12)(font "Arial" ))
+	(text "b8" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -371,7 +371,7 @@ applicable agreement for further details.
 	(input)
 	(rect 632 1176 800 1192)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b9" (rect 5 0 17 12)(font "Arial" ))
+	(text "b9" (rect 5 0 16 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -387,7 +387,7 @@ applicable agreement for further details.
 	(input)
 	(rect 816 1272 984 1288)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b10" (rect 5 0 23 12)(font "Arial" ))
+	(text "b10" (rect 5 0 22 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -403,7 +403,7 @@ applicable agreement for further details.
 	(input)
 	(rect 1000 1376 1168 1392)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "b11" (rect 5 0 23 12)(font "Arial" ))
+	(text "b11" (rect 5 0 22 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))

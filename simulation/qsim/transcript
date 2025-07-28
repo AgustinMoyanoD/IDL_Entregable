@@ -27,5 +27,5 @@
 # Loading work.Incrementador_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : testIncrementador.vwf.vt(560)
+# ** Note: $finish    : Waveform.vwf.vt(562)
 #    Time: 1 us  Iteration: 0  Instance: /Incrementador_vlg_vec_tst/tb_out

@@ -21,6 +21,7 @@ entity Incrementador is
         Data0           : in     vl_logic;
         b1              : in     vl_logic;
         b2              : in     vl_logic;
+        signob          : in     vl_logic;
         ou0             : out    vl_logic;
         ou1             : out    vl_logic;
         ou2             : out    vl_logic;

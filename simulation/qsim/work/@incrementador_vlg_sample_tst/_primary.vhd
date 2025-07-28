@@ -20,6 +20,7 @@ entity Incrementador_vlg_sample_tst is
         data10          : in     vl_logic;
         data11          : in     vl_logic;
         ResetFFIn       : in     vl_logic;
+        signob          : in     vl_logic;
         sampler_tx      : out    vl_logic
     );
 end Incrementador_vlg_sample_tst;
