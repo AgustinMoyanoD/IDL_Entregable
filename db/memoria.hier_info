@@ -1,9 +1,11 @@
 |Incrementador
 CarryFinal <= SumadorReCompleto123:inst.S_src12
 b0 => SumadorReCompleto123:inst.b0
-ActivarConteo => MaquinaControlMultiplex:inst2.Activar
+ClockIn => memoria:inst1.CLK
 ClockIn => MaquinaControlMultiplex:inst2.Reloj
+ResetFFIn => memoria:inst1.clear_ff
 ResetFFIn => MaquinaControlMultiplex:inst2.ResetFFMUL
+ActivarConteo => MaquinaControlMultiplex:inst2.Activar
 data11 => lpm_mux0:inst3.data0x[11]
 data10 => lpm_mux0:inst3.data0x[10]
 data9 => lpm_mux0:inst3.data0x[9]
@@ -18,9 +20,9 @@ data1 => lpm_mux0:inst3.data0x[1]
 Data0 => lpm_mux0:inst3.data0x[0]
 b1 => SumadorReCompleto123:inst.b1
 b2 => SumadorReCompleto123:inst.b2
-ou0 <= <GND>
+ou0 <= Incremento[0].DB_MAX_OUTPUT_PORT_TYPE
 ou1 <= <GND>
-ou2 <= SumadorReCompleto123:inst.S_src2
+ou2 <= Incremento[2].DB_MAX_OUTPUT_PORT_TYPE
 ou3 <= <GND>
 ou4 <= <GND>
 ou5 <= <GND>
@@ -30,6 +32,8 @@ ou8 <= <GND>
 ou9 <= <GND>
 ou10 <= <GND>
 ou11 <= <GND>
+enableWrite <= MaquinaControlMultiplex:inst2.activarMemoria
+selectSel <= MaquinaControlMultiplex:inst2.seleccionarEntrada
 
 
 |Incrementador|SumadorReCompleto123:inst

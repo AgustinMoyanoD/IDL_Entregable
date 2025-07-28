@@ -212,6 +212,16 @@ SIGNAL("data11")
 	PARENT = "";
 }
 
+SIGNAL("enableWrite")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 SIGNAL("ou0")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -342,17 +352,27 @@ SIGNAL("ResetFFIn")
 	PARENT = "";
 }
 
+SIGNAL("selectSel")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 GROUP("Incremento")
 {
 	MEMBERS = "b2", "b1", "b0";
 }
 
-GROUP("NumInicial")
+GROUP("dataEntry")
 {
-	MEMBERS = "data11", "data10", "data9", "data8", "data7", "data6", "data5", "data4", "data3", "data2", "data1", "Data0";
+	MEMBERS = "Data0", "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10", "data11";
 }
 
-GROUP("NumeroInc")
+GROUP("output")
 {
 	MEMBERS = "CarryFinal", "ou11", "ou10", "ou9", "ou8", "ou7", "ou6", "ou5", "ou4", "ou3", "ou2", "ou1", "ou0";
 }
@@ -421,7 +441,7 @@ TRANSITION_LIST("Data0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -430,7 +450,7 @@ TRANSITION_LIST("data1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -521,6 +541,15 @@ TRANSITION_LIST("data11")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("enableWrite")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -637,8 +666,17 @@ TRANSITION_LIST("ResetFFIn")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 990.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 980.0;
+	}
+}
+
+TRANSITION_LIST("selectSel")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -653,7 +691,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ResetFFIn";
+	CHANNEL = "ClockIn";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -662,7 +700,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ClockIn";
+	CHANNEL = "ResetFFIn";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -711,7 +749,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "NumInicial";
+	CHANNEL = "dataEntry";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -841,7 +879,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "NumeroInc";
+	CHANNEL = "output";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
@@ -977,6 +1015,24 @@ DISPLAY_LINE
 	TREE_INDEX = 33;
 	TREE_LEVEL = 1;
 	PARENT = 20;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "enableWrite";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 34;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "selectSel";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 35;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

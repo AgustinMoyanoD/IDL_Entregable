@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity Incrementador_vlg_check_tst is
     port(
         CarryFinal      : in     vl_logic;
+        enableWrite     : in     vl_logic;
         ou0             : in     vl_logic;
         ou1             : in     vl_logic;
         ou2             : in     vl_logic;
@@ -15,6 +16,7 @@ entity Incrementador_vlg_check_tst is
         ou9             : in     vl_logic;
         ou10            : in     vl_logic;
         ou11            : in     vl_logic;
+        selectSel       : in     vl_logic;
         sampler_rx      : in     vl_logic
     );
 end Incrementador_vlg_check_tst;
