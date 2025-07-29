@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/27/2025 21:30:05"
+// Generated on "07/29/2025 17:20:59"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Incrementador
 // 
@@ -45,6 +45,7 @@ module Incrementador_vlg_sample_tst(
 	data10,
 	data11,
 	ResetFFIn,
+	signo,
 	sampler_tx
 );
 input  ActivarConteo;
@@ -65,11 +66,12 @@ input  data9;
 input  data10;
 input  data11;
 input  ResetFFIn;
+input  signo;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(ActivarConteo or b0 or b1 or b2 or ClockIn or Data0 or data1 or data2 or data3 or data4 or data5 or data6 or data7 or data8 or data9 or data10 or data11 or ResetFFIn)
+always @(ActivarConteo or b0 or b1 or b2 or ClockIn or Data0 or data1 or data2 or data3 or data4 or data5 or data6 or data7 or data8 or data9 or data10 or data11 or ResetFFIn or signo)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -582,6 +584,7 @@ reg data9;
 reg data10;
 reg data11;
 reg ResetFFIn;
+reg signo;
 // wires                                               
 wire CarryFinal;
 wire enableWrite;
@@ -636,7 +639,8 @@ Incrementador i1 (
 	.ou10(ou10),
 	.ou11(ou11),
 	.ResetFFIn(ResetFFIn),
-	.selectSel(selectSel)
+	.selectSel(selectSel),
+	.signo(signo)
 );
 
 // ActivarConteo
@@ -657,7 +661,13 @@ end
 initial
 begin
 	ResetFFIn = 1'b0;
-	ResetFFIn = #20000 1'b1;
+	ResetFFIn = #10000 1'b1;
+end 
+
+// signo
+initial
+begin
+	signo = 1'b0;
 end 
 
 // b2
@@ -669,13 +679,13 @@ end
 // b1
 initial
 begin
-	b1 = 1'b0;
+	b1 = 1'b1;
 end 
 
 // b0
 initial
 begin
-	b0 = 1'b1;
+	b0 = 1'b0;
 end 
 
 // data11
@@ -769,6 +779,7 @@ Incrementador_vlg_sample_tst tb_sample (
 	.data10(data10),
 	.data11(data11),
 	.ResetFFIn(ResetFFIn),
+	.signo(signo),
 	.sampler_tx(sampler)
 );
 

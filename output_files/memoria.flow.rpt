@@ -1,5 +1,5 @@
 Flow report for memoria
-Tue Jul 29 16:57:59 2025
+Tue Jul 29 17:27:10 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Jul 29 16:57:59 2025      ;
+; Flow Status                        ; Successful - Tue Jul 29 17:27:10 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; memoria                                    ;
 ; Top-level Entity Name              ; main                                       ;
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/29/2025 16:57:19 ;
+; Start date & time ; 07/29/2025 17:21:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; memoria             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                              ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 161407191313948.175381903916700                                    ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 161407191313948.175382051717944                                    ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                 ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                        ; --            ; --          ; eda_simulation ;
@@ -101,14 +101,16 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4728 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4725 MB             ; 00:00:02                           ;
 ; Fitter                    ; 00:00:06     ; 1.0                     ; 5062 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4641 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:02                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4641 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4641 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4593 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4594 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4610 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:12                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4594 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4599 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4594 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4599 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:12     ; --                      ; --                  ; 00:00:12                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,6 +126,8 @@ applicable agreement for further details.
 ; EDA Netlist Writer        ; DESKTOP-MP1J5TL  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-MP1J5TL  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-MP1J5TL  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-MP1J5TL  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-MP1J5TL  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -135,6 +139,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off IDL_Integrador 
 quartus_asm --read_settings_files=off --write_settings_files=off IDL_Integrador -c memoria
 quartus_sta IDL_Integrador -c memoria
 quartus_eda --read_settings_files=off --write_settings_files=off IDL_Integrador -c memoria
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog IDL_Integrador -c memoria --vector_source=C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/testMain.vwf --testbench_file=C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/simulation/qsim/testMain.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/simulation/qsim/ IDL_Integrador -c memoria
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog IDL_Integrador -c memoria --vector_source=C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/testMain.vwf --testbench_file=C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/simulation/qsim/testMain.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/simulation/qsim/ IDL_Integrador -c memoria
 

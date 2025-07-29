@@ -1,0 +1,47 @@
+library verilog;
+use verilog.vl_types.all;
+entity Cargador is
+    port(
+        vi11            : out    vl_logic;
+        CLK             : in     vl_logic;
+        Clear           : in     vl_logic;
+        RECARGAR        : in     vl_logic;
+        LOAD_I          : in     vl_logic;
+        LOAD_F          : in     vl_logic;
+        Dato11          : in     vl_logic;
+        Dato10          : in     vl_logic;
+        Dato9           : in     vl_logic;
+        Dato8           : in     vl_logic;
+        Dato7           : in     vl_logic;
+        Dato6           : in     vl_logic;
+        Dato5           : in     vl_logic;
+        Dato4           : in     vl_logic;
+        Dato3           : in     vl_logic;
+        Dato2           : in     vl_logic;
+        Dato1           : in     vl_logic;
+        Dato0           : in     vl_logic;
+        vi10            : out    vl_logic;
+        vi9             : out    vl_logic;
+        vi8             : out    vl_logic;
+        vi7             : out    vl_logic;
+        vi6             : out    vl_logic;
+        vi5             : out    vl_logic;
+        vi4             : out    vl_logic;
+        vi3             : out    vl_logic;
+        vi2             : out    vl_logic;
+        vi1             : out    vl_logic;
+        vi0             : out    vl_logic;
+        vf11            : out    vl_logic;
+        vf10            : out    vl_logic;
+        vf9             : out    vl_logic;
+        vf8             : out    vl_logic;
+        vf7             : out    vl_logic;
+        vf6             : out    vl_logic;
+        vf5             : out    vl_logic;
+        vf4             : out    vl_logic;
+        vf3             : out    vl_logic;
+        vf2             : out    vl_logic;
+        vf1             : out    vl_logic;
+        vf0             : out    vl_logic
+    );
+end Cargador;

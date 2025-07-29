@@ -1865,191 +1865,6 @@ applicable agreement for further details.
 	(pt 432 272)
 )
 (connector
-	(pt 184 1000)
-	(pt 184 208)
-)
-(connector
-	(text "CLK" (rect 938 216 959 228)(font "Arial" ))
-	(pt 992 224)
-	(pt 968 224)
-)
-(connector
-	(pt 968 448)
-	(pt 992 448)
-)
-(connector
-	(pt 968 696)
-	(pt 968 448)
-)
-(connector
-	(pt 184 208)
-	(pt 992 208)
-)
-(connector
-	(pt 576 256)
-	(pt 992 256)
-)
-(connector
-	(pt 576 272)
-	(pt 992 272)
-)
-(connector
-	(pt 576 288)
-	(pt 992 288)
-)
-(connector
-	(pt 576 304)
-	(pt 992 304)
-)
-(connector
-	(pt 576 320)
-	(pt 992 320)
-)
-(connector
-	(pt 576 336)
-	(pt 992 336)
-)
-(connector
-	(pt 576 352)
-	(pt 992 352)
-)
-(connector
-	(pt 576 368)
-	(pt 992 368)
-)
-(connector
-	(pt 576 384)
-	(pt 992 384)
-)
-(connector
-	(pt 576 400)
-	(pt 992 400)
-)
-(connector
-	(pt 576 416)
-	(pt 992 416)
-)
-(connector
-	(pt 576 432)
-	(pt 992 432)
-)
-(connector
-	(pt 1200 192)
-	(pt 1208 192)
-)
-(connector
-	(text "Ak[0]" (rect 1210 176 1235 188)(font "Arial" ))
-	(pt 1208 192)
-	(pt 1224 192)
-)
-(connector
-	(pt 1200 208)
-	(pt 1208 208)
-)
-(connector
-	(text "Ak[1]" (rect 1210 192 1235 204)(font "Arial" ))
-	(pt 1208 208)
-	(pt 1224 208)
-)
-(connector
-	(pt 1200 224)
-	(pt 1208 224)
-)
-(connector
-	(text "Ak[2]" (rect 1210 208 1235 220)(font "Arial" ))
-	(pt 1208 224)
-	(pt 1224 224)
-)
-(connector
-	(pt 1200 240)
-	(pt 1208 240)
-)
-(connector
-	(text "Ak[3]" (rect 1210 224 1235 236)(font "Arial" ))
-	(pt 1208 240)
-	(pt 1224 240)
-)
-(connector
-	(pt 416 240)
-	(pt 976 240)
-)
-(connector
-	(pt 976 240)
-	(pt 992 240)
-)
-(connector
-	(pt 1200 256)
-	(pt 1208 256)
-)
-(connector
-	(text "Ak[4]" (rect 1210 240 1235 252)(font "Arial" ))
-	(pt 1208 256)
-	(pt 1224 256)
-)
-(connector
-	(pt 1200 272)
-	(pt 1208 272)
-)
-(connector
-	(text "Ak[5]" (rect 1210 256 1235 268)(font "Arial" ))
-	(pt 1208 272)
-	(pt 1224 272)
-)
-(connector
-	(pt 1200 288)
-	(pt 1208 288)
-)
-(connector
-	(text "Ak[6]" (rect 1210 272 1235 284)(font "Arial" ))
-	(pt 1208 288)
-	(pt 1224 288)
-)
-(connector
-	(pt 1200 304)
-	(pt 1208 304)
-)
-(connector
-	(text "Ak[7]" (rect 1210 288 1235 300)(font "Arial" ))
-	(pt 1208 304)
-	(pt 1224 304)
-)
-(connector
-	(pt 1200 320)
-	(pt 1208 320)
-)
-(connector
-	(text "Ak[8]" (rect 1210 304 1235 316)(font "Arial" ))
-	(pt 1208 320)
-	(pt 1224 320)
-)
-(connector
-	(pt 1200 336)
-	(pt 1208 336)
-)
-(connector
-	(text "Ak[9]" (rect 1210 320 1235 332)(font "Arial" ))
-	(pt 1208 336)
-	(pt 1224 336)
-)
-(connector
-	(pt 1200 352)
-	(pt 1208 352)
-)
-(connector
-	(text "Ak[10]" (rect 1210 336 1241 348)(font "Arial" ))
-	(pt 1208 352)
-	(pt 1224 352)
-)
-(connector
-	(pt 1200 368)
-	(pt 1208 368)
-)
-(connector
-	(text "Ak[11]" (rect 1208 352 1239 364)(font "Arial" ))
-	(pt 1208 368)
-	(pt 1224 368)
-)
-(connector
 	(pt 432 512)
 	(pt 408 512)
 )
@@ -2142,30 +1957,6 @@ applicable agreement for further details.
 	(pt 432 480)
 )
 (connector
-	(pt 152 160)
-	(pt 160 160)
-)
-(connector
-	(pt 160 160)
-	(pt 992 160)
-)
-(connector
-	(pt 152 176)
-	(pt 168 176)
-)
-(connector
-	(pt 168 176)
-	(pt 992 176)
-)
-(connector
-	(pt 152 192)
-	(pt 176 192)
-)
-(connector
-	(pt 176 192)
-	(pt 992 192)
-)
-(connector
 	(pt 1296 856)
 	(pt 1328 856)
 )
@@ -2188,14 +1979,6 @@ applicable agreement for further details.
 (connector
 	(pt 408 952)
 	(pt 1088 952)
-)
-(connector
-	(pt 176 1000)
-	(pt 184 1000)
-)
-(connector
-	(pt 184 1000)
-	(pt 1088 1000)
 )
 (connector
 	(pt 1088 1016)
@@ -2440,6 +2223,223 @@ applicable agreement for further details.
 (connector
 	(pt 584 928)
 	(pt 584 936)
+)
+(connector
+	(pt 184 1000)
+	(pt 184 208)
+)
+(connector
+	(text "CLK" (rect 938 216 959 228)(font "Arial" ))
+	(pt 992 224)
+	(pt 968 224)
+)
+(connector
+	(pt 968 448)
+	(pt 992 448)
+)
+(connector
+	(pt 968 696)
+	(pt 968 448)
+)
+(connector
+	(pt 184 208)
+	(pt 992 208)
+)
+(connector
+	(pt 576 256)
+	(pt 992 256)
+)
+(connector
+	(pt 576 272)
+	(pt 992 272)
+)
+(connector
+	(pt 576 288)
+	(pt 992 288)
+)
+(connector
+	(pt 576 304)
+	(pt 992 304)
+)
+(connector
+	(pt 576 320)
+	(pt 992 320)
+)
+(connector
+	(pt 576 336)
+	(pt 992 336)
+)
+(connector
+	(pt 576 352)
+	(pt 992 352)
+)
+(connector
+	(pt 576 368)
+	(pt 992 368)
+)
+(connector
+	(pt 576 384)
+	(pt 992 384)
+)
+(connector
+	(pt 576 400)
+	(pt 992 400)
+)
+(connector
+	(pt 576 416)
+	(pt 992 416)
+)
+(connector
+	(pt 576 432)
+	(pt 992 432)
+)
+(connector
+	(pt 176 1000)
+	(pt 184 1000)
+)
+(connector
+	(pt 184 1000)
+	(pt 1088 1000)
+)
+(connector
+	(pt 152 160)
+	(pt 160 160)
+)
+(connector
+	(pt 160 160)
+	(pt 992 160)
+)
+(connector
+	(pt 152 176)
+	(pt 168 176)
+)
+(connector
+	(pt 168 176)
+	(pt 992 176)
+)
+(connector
+	(pt 1200 192)
+	(pt 1208 192)
+)
+(connector
+	(text "Ak[0]" (rect 1210 176 1235 188)(font "Arial" ))
+	(pt 1208 192)
+	(pt 1224 192)
+)
+(connector
+	(pt 152 192)
+	(pt 176 192)
+)
+(connector
+	(pt 176 192)
+	(pt 992 192)
+)
+(connector
+	(pt 1200 208)
+	(pt 1208 208)
+)
+(connector
+	(text "Ak[1]" (rect 1210 192 1235 204)(font "Arial" ))
+	(pt 1208 208)
+	(pt 1224 208)
+)
+(connector
+	(pt 1200 224)
+	(pt 1208 224)
+)
+(connector
+	(text "Ak[2]" (rect 1210 208 1235 220)(font "Arial" ))
+	(pt 1208 224)
+	(pt 1224 224)
+)
+(connector
+	(pt 1200 240)
+	(pt 1208 240)
+)
+(connector
+	(text "Ak[3]" (rect 1210 224 1235 236)(font "Arial" ))
+	(pt 1208 240)
+	(pt 1224 240)
+)
+(connector
+	(pt 416 240)
+	(pt 976 240)
+)
+(connector
+	(pt 976 240)
+	(pt 992 240)
+)
+(connector
+	(pt 1200 256)
+	(pt 1208 256)
+)
+(connector
+	(text "Ak[4]" (rect 1210 240 1235 252)(font "Arial" ))
+	(pt 1208 256)
+	(pt 1224 256)
+)
+(connector
+	(pt 1200 272)
+	(pt 1208 272)
+)
+(connector
+	(text "Ak[5]" (rect 1210 256 1235 268)(font "Arial" ))
+	(pt 1208 272)
+	(pt 1224 272)
+)
+(connector
+	(pt 1200 288)
+	(pt 1208 288)
+)
+(connector
+	(text "Ak[6]" (rect 1210 272 1235 284)(font "Arial" ))
+	(pt 1208 288)
+	(pt 1224 288)
+)
+(connector
+	(pt 1200 304)
+	(pt 1208 304)
+)
+(connector
+	(text "Ak[7]" (rect 1210 288 1235 300)(font "Arial" ))
+	(pt 1208 304)
+	(pt 1224 304)
+)
+(connector
+	(pt 1200 320)
+	(pt 1208 320)
+)
+(connector
+	(text "Ak[8]" (rect 1210 304 1235 316)(font "Arial" ))
+	(pt 1208 320)
+	(pt 1224 320)
+)
+(connector
+	(pt 1200 336)
+	(pt 1208 336)
+)
+(connector
+	(text "Ak[9]" (rect 1210 320 1235 332)(font "Arial" ))
+	(pt 1208 336)
+	(pt 1224 336)
+)
+(connector
+	(pt 1200 352)
+	(pt 1208 352)
+)
+(connector
+	(text "Ak[10]" (rect 1210 336 1241 348)(font "Arial" ))
+	(pt 1208 352)
+	(pt 1224 352)
+)
+(connector
+	(pt 1200 368)
+	(pt 1208 368)
+)
+(connector
+	(text "Ak[11]" (rect 1208 352 1239 364)(font "Arial" ))
+	(pt 1208 368)
+	(pt 1224 368)
 )
 (junction (pt 1224 208))
 (junction (pt 1224 224))
