@@ -38,18 +38,18 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
-		(pt 0 320)
-		(input)
-		(text "ActivarConteo" (rect 0 0 81 14)(font "Arial" (font_size 8)))
-		(text "ActivarConteo" (rect 21 315 102 329)(font "Arial" (font_size 8)))
-		(line (pt 0 320)(pt 16 320))
-	)
-	(port
 		(pt 0 64)
 		(input)
-		(text "b0" (rect 0 0 14 14)(font "Arial" (font_size 8)))
-		(text "b0" (rect 21 59 35 73)(font "Arial" (font_size 8)))
+		(text "ActivarConteo" (rect 0 0 81 14)(font "Arial" (font_size 8)))
+		(text "ActivarConteo" (rect 21 59 102 73)(font "Arial" (font_size 8)))
 		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "b0" (rect 0 0 14 14)(font "Arial" (font_size 8)))
+		(text "b0" (rect 21 75 35 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 0 96)
@@ -115,11 +115,11 @@ applicable agreement for further details.
 		(line (pt 0 224)(pt 16 224))
 	)
 	(port
-		(pt 0 80)
+		(pt 0 336)
 		(input)
 		(text "signob" (rect 0 0 37 14)(font "Arial" (font_size 8)))
-		(text "signob" (rect 21 75 58 89)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80))
+		(text "signob" (rect 21 331 58 345)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 16 336))
 	)
 	(port
 		(pt 0 240)
@@ -262,6 +262,6 @@ applicable agreement for further details.
 		(line (pt 208 256)(pt 192 256))
 	)
 	(drawing
-		(rectangle (rect 16 16 192 352))
+		(rectangle (rect 17 17 185 353))
 	)
 )
