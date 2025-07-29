@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 56 72 224 88)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Q2D2" (rect 5 0 34 12)(font "Arial" ))
+	(text "Q2D2" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 56 104 224 120)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Q1D2" (rect 5 0 34 12)(font "Arial" ))
+	(text "Q1D2" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 56 160 224 176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Q0D2" (rect 5 0 34 12)(font "Arial" ))
+	(text "Q0D2" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 56 200 224 216)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "RecargarD2" (rect 5 0 65 12)(font "Arial" ))
+	(text "RecargarD2" (rect 5 0 64 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect 24 288 192 304)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "PausarD2" (rect 5 0 54 12)(font "Arial" ))
+	(text "PausarD2" (rect 5 0 53 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ applicable agreement for further details.
 	(input)
 	(rect 64 328 232 344)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "ContinuarD2" (rect 5 0 67 12)(font "Arial" ))
+	(text "ContinuarD2" (rect 5 0 66 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -119,7 +119,7 @@ applicable agreement for further details.
 	(input)
 	(rect 56 256 224 272)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "FinConteoD2" (rect 5 0 70 12)(font "Arial" ))
+	(text "FinConteoD2" (rect 5 0 69 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -780,11 +780,6 @@ applicable agreement for further details.
 	(pt 256 296)
 )
 (connector
-	(text "CABPAUSAD2" (rect 328 368 401 380)(font "Arial" ))
-	(pt 352 384)
-	(pt 328 384)
-)
-(connector
 	(pt 504 368)
 	(pt 504 360)
 )
@@ -805,4 +800,9 @@ applicable agreement for further details.
 	(text "CABRECD2" (rect 448 368 508 380)(font "Arial" ))
 	(pt 464 384)
 	(pt 448 384)
+)
+(connector
+	(text "CABPAUSAD2" (rect 208 368 281 380)(font "Arial" ))
+	(pt 208 384)
+	(pt 352 384)
 )

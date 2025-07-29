@@ -1,0 +1,48 @@
+library verilog;
+use verilog.vl_types.all;
+entity main is
+    port(
+        FIN             : out    vl_logic;
+        b2              : in     vl_logic;
+        b1              : in     vl_logic;
+        b0              : in     vl_logic;
+        Recargar        : in     vl_logic;
+        LOAD_I          : in     vl_logic;
+        LOAD_F          : in     vl_logic;
+        Continuar       : in     vl_logic;
+        CLK             : in     vl_logic;
+        Reset           : in     vl_logic;
+        Dato0           : in     vl_logic;
+        Dato1           : in     vl_logic;
+        Dato2           : in     vl_logic;
+        Dato3           : in     vl_logic;
+        Dato4           : in     vl_logic;
+        Dato5           : in     vl_logic;
+        Dato6           : in     vl_logic;
+        Dato7           : in     vl_logic;
+        Dato8           : in     vl_logic;
+        Dato9           : in     vl_logic;
+        Dato10          : in     vl_logic;
+        Dato11          : in     vl_logic;
+        updown          : in     vl_logic;
+        Start           : in     vl_logic;
+        PAUSA           : out    vl_logic;
+        ENABLE_COUNT    : out    vl_logic;
+        ERROR           : out    vl_logic;
+        Ak_out0         : out    vl_logic;
+        Ak_out1         : out    vl_logic;
+        Ak_out2         : out    vl_logic;
+        Ak_out3         : out    vl_logic;
+        Ak_out4         : out    vl_logic;
+        Ak_out5         : out    vl_logic;
+        Ak_out6         : out    vl_logic;
+        Ak_out7         : out    vl_logic;
+        Ak_out8         : out    vl_logic;
+        Ak_out9         : out    vl_logic;
+        Ak_out10        : out    vl_logic;
+        Ak_out11        : out    vl_logic;
+        igual           : out    vl_logic;
+        mayor           : out    vl_logic;
+        menor           : out    vl_logic
+    );
+end main;

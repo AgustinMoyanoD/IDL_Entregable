@@ -311,7 +311,7 @@ applicable agreement for further details.
 	(input)
 	(rect 320 -144 488 -128)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "signo" (rect 5 0 31 12)(font "Arial" ))
+	(text "signo" (rect 5 0 30 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1556,11 +1556,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 928 528)
-	(pt 16 528)
-	(bus)
-)
-(connector
 	(text "Incremento[11..0]" (rect 26 64 113 76)(font "Arial" ))
 	(pt 80 80)
 	(pt 16 80)
@@ -1570,54 +1565,6 @@ applicable agreement for further details.
 	(text "result[0]" (rect 282 248 322 260)(font "Arial" ))
 	(pt 272 264)
 	(pt 376 264)
-)
-(connector
-	(pt 536 216)
-	(pt 640 216)
-)
-(connector
-	(pt 536 200)
-	(pt 640 200)
-)
-(connector
-	(pt 536 184)
-	(pt 640 184)
-)
-(connector
-	(pt 536 168)
-	(pt 640 168)
-)
-(connector
-	(pt 536 152)
-	(pt 640 152)
-)
-(connector
-	(pt 536 136)
-	(pt 640 136)
-)
-(connector
-	(pt 536 120)
-	(pt 640 120)
-)
-(connector
-	(pt 536 104)
-	(pt 640 104)
-)
-(connector
-	(pt 536 88)
-	(pt 640 88)
-)
-(connector
-	(pt 536 72)
-	(pt 640 72)
-)
-(connector
-	(pt 536 56)
-	(pt 640 56)
-)
-(connector
-	(pt 536 40)
-	(pt 640 40)
 )
 (connector
 	(pt 944 216)
@@ -1788,78 +1735,6 @@ applicable agreement for further details.
 	(pt 880 40)
 )
 (connector
-	(text "Incremento[2]" (rect 778 188 846 200)(font "Arial" ))
-	(pt 768 184)
-	(pt 856 184)
-)
-(connector
-	(pt 856 184)
-	(pt 872 184)
-)
-(connector
-	(text "Incremento[3]" (rect 778 172 846 184)(font "Arial" ))
-	(pt 768 168)
-	(pt 856 168)
-)
-(connector
-	(pt 856 168)
-	(pt 872 168)
-)
-(connector
-	(text "Incremento[4]" (rect 778 156 846 168)(font "Arial" ))
-	(pt 768 152)
-	(pt 856 152)
-)
-(connector
-	(pt 856 152)
-	(pt 872 152)
-)
-(connector
-	(text "Incremento[5]" (rect 778 140 846 152)(font "Arial" ))
-	(pt 768 136)
-	(pt 856 136)
-)
-(connector
-	(pt 856 136)
-	(pt 872 136)
-)
-(connector
-	(text "Incremento[6]" (rect 778 124 846 136)(font "Arial" ))
-	(pt 768 120)
-	(pt 856 120)
-)
-(connector
-	(pt 856 120)
-	(pt 872 120)
-)
-(connector
-	(text "Incremento[7]" (rect 778 108 846 120)(font "Arial" ))
-	(pt 768 104)
-	(pt 856 104)
-)
-(connector
-	(pt 856 104)
-	(pt 872 104)
-)
-(connector
-	(text "Incremento[8]" (rect 778 92 846 104)(font "Arial" ))
-	(pt 768 88)
-	(pt 856 88)
-)
-(connector
-	(pt 856 88)
-	(pt 872 88)
-)
-(connector
-	(text "Incremento[9]" (rect 778 76 846 88)(font "Arial" ))
-	(pt 768 72)
-	(pt 856 72)
-)
-(connector
-	(pt 856 72)
-	(pt 872 72)
-)
-(connector
 	(pt 872 168)
 	(pt 872 184)
 	(bus)
@@ -1903,28 +1778,142 @@ applicable agreement for further details.
 	(pt 872 56)
 	(pt 872 72)
 	(bus)
-)
-(connector
-	(text "Incremento[10]" (rect 778 60 852 72)(font "Arial" ))
-	(pt 768 56)
-	(pt 856 56)
-)
-(connector
-	(pt 856 56)
-	(pt 872 56)
-)
-(connector
-	(text "Incremento[11]" (rect 778 44 852 56)(font "Arial" ))
-	(pt 768 40)
-	(pt 856 40)
-)
-(connector
-	(pt 856 40)
-	(pt 872 40)
 )
 (connector
 	(pt 944 8)
 	(pt 776 8)
+)
+(connector
+	(pt 584 -136)
+	(pt 592 -136)
+)
+(connector
+	(pt 584 -152)
+	(pt 608 -152)
+)
+(connector
+	(pt 584 -168)
+	(pt 624 -168)
+)
+(connector
+	(pt 944 200)
+	(pt 880 200)
+)
+(connector
+	(pt 872 184)
+	(pt 872 200)
+	(bus)
+)
+(connector
+	(pt 856 200)
+	(pt 856 208)
+)
+(connector
+	(pt 856 208)
+	(pt 880 208)
+)
+(connector
+	(pt 880 200)
+	(pt 880 208)
+)
+(connector
+	(pt 944 184)
+	(pt 880 184)
+)
+(connector
+	(pt 880 192)
+	(pt 880 184)
+)
+(connector
+	(pt 872 528)
+	(pt 16 528)
+	(bus)
+)
+(connector
+	(pt 872 200)
+	(pt 872 216)
+	(bus)
+)
+(connector
+	(pt 872 216)
+	(pt 872 528)
+	(bus)
+)
+(connector
+	(pt 632 -136)
+	(pt 640 -136)
+)
+(connector
+	(pt 632 -120)
+	(pt 640 -120)
+)
+(connector
+	(pt 632 -104)
+	(pt 640 -104)
+)
+(connector
+	(pt 632 -88)
+	(pt 640 -88)
+)
+(connector
+	(pt 632 -72)
+	(pt 640 -72)
+)
+(connector
+	(pt 632 -56)
+	(pt 640 -56)
+)
+(connector
+	(pt 632 -40)
+	(pt 640 -40)
+)
+(connector
+	(pt 536 40)
+	(pt 640 40)
+)
+(connector
+	(pt 536 56)
+	(pt 640 56)
+)
+(connector
+	(pt 536 72)
+	(pt 640 72)
+)
+(connector
+	(pt 536 88)
+	(pt 640 88)
+)
+(connector
+	(pt 536 104)
+	(pt 640 104)
+)
+(connector
+	(pt 536 120)
+	(pt 640 120)
+)
+(connector
+	(pt 536 136)
+	(pt 640 136)
+)
+(connector
+	(pt 536 152)
+	(pt 640 152)
+)
+(connector
+	(pt 536 168)
+	(pt 640 168)
+)
+(connector
+	(pt 536 184)
+	(pt 640 184)
+)
+(connector
+	(pt 536 200)
+	(pt 640 200)
+)
+(connector
+	(pt 536 216)
+	(pt 640 216)
 )
 (connector
 	(pt 776 8)
@@ -1935,24 +1924,12 @@ applicable agreement for further details.
 	(pt 768 24)
 )
 (connector
-	(pt 584 -136)
-	(pt 592 -136)
-)
-(connector
 	(pt 592 -136)
 	(pt 592 24)
 )
 (connector
-	(pt 584 -152)
-	(pt 608 -152)
-)
-(connector
 	(pt 608 -152)
 	(pt 608 8)
-)
-(connector
-	(pt 584 -168)
-	(pt 624 -168)
 )
 (connector
 	(pt 624 -168)
@@ -1971,72 +1948,122 @@ applicable agreement for further details.
 	(pt 640 -8)
 )
 (connector
-	(pt 584 -184)
-	(pt 632 -184)
-)
-(connector
-	(pt 640 -24)
 	(pt 632 -24)
+	(pt 640 -24)
 )
 (connector
 	(pt 632 -152)
 	(pt 640 -152)
 )
 (connector
-	(pt 632 -184)
-	(pt 632 -152)
-)
-(connector
-	(pt 632 -136)
-	(pt 640 -136)
-)
-(connector
-	(pt 632 -152)
-	(pt 632 -136)
-)
-(connector
-	(pt 632 -120)
-	(pt 640 -120)
-)
-(connector
 	(pt 632 -136)
 	(pt 632 -120)
-)
-(connector
-	(pt 632 -104)
-	(pt 640 -104)
 )
 (connector
 	(pt 632 -120)
 	(pt 632 -104)
-)
-(connector
-	(pt 632 -88)
-	(pt 640 -88)
 )
 (connector
 	(pt 632 -104)
 	(pt 632 -88)
-)
-(connector
-	(pt 632 -72)
-	(pt 640 -72)
 )
 (connector
 	(pt 632 -88)
 	(pt 632 -72)
-)
-(connector
-	(pt 632 -56)
-	(pt 640 -56)
 )
 (connector
 	(pt 632 -72)
 	(pt 632 -56)
 )
 (connector
-	(pt 632 -40)
-	(pt 640 -40)
+	(text "Incremento[11]" (rect 778 44 852 56)(font "Arial" ))
+	(pt 768 40)
+	(pt 856 40)
+)
+(connector
+	(pt 856 40)
+	(pt 872 40)
+)
+(connector
+	(text "Incremento[10]" (rect 778 60 852 72)(font "Arial" ))
+	(pt 768 56)
+	(pt 856 56)
+)
+(connector
+	(pt 856 56)
+	(pt 872 56)
+)
+(connector
+	(text "Incremento[9]" (rect 778 76 846 88)(font "Arial" ))
+	(pt 768 72)
+	(pt 856 72)
+)
+(connector
+	(pt 856 72)
+	(pt 872 72)
+)
+(connector
+	(text "Incremento[8]" (rect 778 92 846 104)(font "Arial" ))
+	(pt 768 88)
+	(pt 856 88)
+)
+(connector
+	(pt 856 88)
+	(pt 872 88)
+)
+(connector
+	(text "Incremento[7]" (rect 778 108 846 120)(font "Arial" ))
+	(pt 768 104)
+	(pt 856 104)
+)
+(connector
+	(pt 856 104)
+	(pt 872 104)
+)
+(connector
+	(text "Incremento[6]" (rect 778 124 846 136)(font "Arial" ))
+	(pt 768 120)
+	(pt 856 120)
+)
+(connector
+	(pt 856 120)
+	(pt 872 120)
+)
+(connector
+	(text "Incremento[5]" (rect 778 140 846 152)(font "Arial" ))
+	(pt 768 136)
+	(pt 856 136)
+)
+(connector
+	(pt 856 136)
+	(pt 872 136)
+)
+(connector
+	(text "Incremento[4]" (rect 778 156 846 168)(font "Arial" ))
+	(pt 768 152)
+	(pt 856 152)
+)
+(connector
+	(pt 856 152)
+	(pt 872 152)
+)
+(connector
+	(text "Incremento[3]" (rect 778 172 846 184)(font "Arial" ))
+	(pt 768 168)
+	(pt 856 168)
+)
+(connector
+	(pt 856 168)
+	(pt 872 168)
+)
+(connector
+	(text "Incremento[2]" (rect 778 188 846 200)(font "Arial" ))
+	(pt 768 184)
+	(pt 856 184)
+)
+(connector
+	(pt 856 184)
+	(pt 872 184)
 )
 (connector
 	(pt 632 -56)
@@ -2045,41 +2072,6 @@ applicable agreement for further details.
 (connector
 	(pt 632 -40)
 	(pt 632 -24)
-)
-(connector
-	(text "Incremento[0]" (rect 768 220 836 232)(font "Arial" ))
-	(pt 768 216)
-	(pt 864 216)
-)
-(connector
-	(pt 864 216)
-	(pt 872 216)
-)
-(connector
-	(pt 944 200)
-	(pt 880 200)
-)
-(connector
-	(pt 872 184)
-	(pt 872 200)
-	(bus)
-)
-(connector
-	(pt 872 200)
-	(pt 872 216)
-	(bus)
-)
-(connector
-	(pt 856 200)
-	(pt 856 208)
-)
-(connector
-	(pt 856 208)
-	(pt 880 208)
-)
-(connector
-	(pt 880 200)
-	(pt 880 208)
 )
 (connector
 	(text "Incremento[1]" (rect 778 204 846 216)(font "Arial" ))
@@ -2091,12 +2083,25 @@ applicable agreement for further details.
 	(pt 872 200)
 )
 (connector
-	(pt 944 184)
-	(pt 880 184)
+	(text "Incremento[0]" (rect 768 220 836 232)(font "Arial" ))
+	(pt 768 216)
+	(pt 864 216)
 )
 (connector
-	(pt 880 192)
-	(pt 880 184)
+	(pt 864 216)
+	(pt 872 216)
+)
+(connector
+	(pt 584 -184)
+	(pt 632 -184)
+)
+(connector
+	(pt 632 -184)
+	(pt 632 -152)
+)
+(connector
+	(pt 632 -152)
+	(pt 632 -136)
 )
 (junction (pt 272 88))
 (junction (pt 272 104))
@@ -2154,3 +2159,4 @@ applicable agreement for further details.
 (junction (pt 632 -72))
 (junction (pt 632 -56))
 (junction (pt 632 -40))
+(junction (pt 872 216))

@@ -20,7 +20,7 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 224 304)
+	(rect 64 64 272 352)
 	(text "ModuloControlador" (rect 5 0 111 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 272 25 284)(font "Arial" ))
 	(port
@@ -108,18 +108,18 @@ applicable agreement for further details.
 		(line (pt 0 208)(pt 16 208))
 	)
 	(port
-		(pt 0 224)
-		(input)
-		(text "M_Mayor" (rect 0 0 51 14)(font "Arial" (font_size 8)))
-		(text "M_Mayor" (rect 21 219 72 233)(font "Arial" (font_size 8)))
-		(line (pt 0 224)(pt 16 224))
-	)
-	(port
 		(pt 0 240)
 		(input)
-		(text "M_Menor" (rect 0 0 51 14)(font "Arial" (font_size 8)))
-		(text "M_Menor" (rect 21 235 72 249)(font "Arial" (font_size 8)))
+		(text "M_Mayor" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "M_Mayor" (rect 21 235 72 249)(font "Arial" (font_size 8)))
 		(line (pt 0 240)(pt 16 240))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "M_Menor" (rect 0 0 51 14)(font "Arial" (font_size 8)))
+		(text "M_Menor" (rect 21 219 72 233)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
 	)
 	(port
 		(pt 208 32)

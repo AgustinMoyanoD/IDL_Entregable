@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memoria
-Mon Jul 28 21:31:39 2025
+Tue Jul 29 16:57:21 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,9 +15,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: lpm_mux0:inst3|LPM_MUX:LPM_MUX_component
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Incrementador:Inc|lpm_mux0:inst3|LPM_MUX:LPM_MUX_component
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +44,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul 28 21:31:39 2025      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 29 16:57:21 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; memoria                                    ;
-; Top-level Entity Name              ; Incrementador                              ;
+; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 44                                         ;
-;     Total combinational functions  ; 44                                         ;
-;     Dedicated logic registers      ; 14                                         ;
-; Total registers                    ; 14                                         ;
-; Total pins                         ; 34                                         ;
+; Total logic elements               ; 117                                        ;
+;     Total combinational functions  ; 93                                         ;
+;     Dedicated logic registers      ; 41                                         ;
+; Total registers                    ; 41                                         ;
+; Total pins                         ; 42                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -69,7 +70,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; Incrementador      ; memoria            ;
+; Top-level entity name                                                      ; main               ; memoria            ;
 ; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,94 +157,122 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 6      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; memoria.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/memoria.bdf                 ;         ;
-; SemiSumador.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/SemiSumador.bdf             ;         ;
-; SumadorCompleto.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/SumadorCompleto.bdf         ;         ;
-; SumadorReCompleto123.bdf         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/SumadorReCompleto123.bdf    ;         ;
-; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/lpm_mux0.vhd                ;         ;
-; Incrementador.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/Incrementador.bdf           ;         ;
-; MaquinaControlMultiplex.bdf      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/MaquinaControlMultiplex.bdf ;         ;
-; ConvertirBCSaCa2.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/ConvertirBCSaCa2.bdf        ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.tdf                                  ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                               ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/muxlut.inc                                   ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc                                 ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc                                 ;         ;
-; db/mux_uce.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/db/mux_uce.tdf              ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------+---------+
+; memoria.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/memoria.bdf                 ;         ;
+; SemiSumador.bdf                  ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/SemiSumador.bdf             ;         ;
+; SumadorCompleto.bdf              ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/SumadorCompleto.bdf         ;         ;
+; SumadorReCompleto123.bdf         ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/SumadorReCompleto123.bdf    ;         ;
+; compa2bits.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/compa2bits.bdf              ;         ;
+; compa4bits.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/compa4bits.bdf              ;         ;
+; compa8bits.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/compa8bits.bdf              ;         ;
+; comparador12.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/comparador12.bdf            ;         ;
+; ControllerD2.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/ControllerD2.bdf            ;         ;
+; ControllerD1.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/ControllerD1.bdf            ;         ;
+; ControllerD0.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/ControllerD0.bdf            ;         ;
+; ModuloControlador.bdf            ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/ModuloControlador.bdf       ;         ;
+; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/lpm_mux0.vhd                ;         ;
+; Incrementador.bdf                ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/Incrementador.bdf           ;         ;
+; MaquinaControlMultiplex.bdf      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/MaquinaControlMultiplex.bdf ;         ;
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/main.bdf                    ;         ;
+; ConvertirBCSaCa2.bdf             ; yes             ; User Block Diagram/Schematic File        ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/ConvertirBCSaCa2.bdf        ;         ;
+; cargador.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/cargador.bdf                ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.tdf                    ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                 ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/muxlut.inc                     ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/bypassff.inc                   ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/13.1/quartus/libraries/megafunctions/altshift.inc                   ;         ;
+; db/mux_uce.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/db/mux_uce.tdf              ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+--------------------------+----------------------------+
-; Resource                 ; Usage                      ;
-+--------------------------+----------------------------+
-; I/O pins                 ; 34                         ;
-; DSP block 9-bit elements ; 0                          ;
-; Maximum fan-out node     ; ConvertirBCSaCa2:inst|inst ;
-; Maximum fan-out          ; 17                         ;
-; Total fan-out            ; 256                        ;
-; Average fan-out          ; 2.03                       ;
-+--------------------------+----------------------------+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 42               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; CLK~input        ;
+; Maximum fan-out          ; 41               ;
+; Total fan-out            ; 557              ;
+; Average fan-out          ; 2.56             ;
++--------------------------+------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                ; Library Name ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------+--------------+
-; |Incrementador                     ; 44 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 34   ; 0            ; |Incrementador                                                                     ; work         ;
-;    |ConvertirBCSaCa2:inst|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|ConvertirBCSaCa2:inst                                               ; work         ;
-;    |MaquinaControlMultiplex:inst2| ; 4 (4)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|MaquinaControlMultiplex:inst2                                       ; work         ;
-;    |SumadorReCompleto123:inst7|    ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7                                          ; work         ;
-;       |SemiSumador:inst|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SemiSumador:inst                         ; work         ;
-;       |SumadorCompleto:inst10|     ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst10                   ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst10|SemiSumador:inst3 ; work         ;
-;       |SumadorCompleto:inst11|     ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst11                   ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst11|SemiSumador:inst3 ; work         ;
-;       |SumadorCompleto:inst1|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst1                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst1|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst2|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst2                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst2|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst3|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst3                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst3|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst4|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst4                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst4|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst5|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst5                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst5|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst6|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst6                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst6|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst7|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst7                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst7|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst8|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst8                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst8|SemiSumador:inst3  ; work         ;
-;       |SumadorCompleto:inst9|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst9                    ; work         ;
-;          |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|SumadorReCompleto123:inst7|SumadorCompleto:inst9|SemiSumador:inst3  ; work         ;
-;    |lpm_mux0:inst3|                ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|lpm_mux0:inst3                                                      ; work         ;
-;       |lpm_mux:LPM_MUX_component|  ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|lpm_mux0:inst3|lpm_mux:LPM_MUX_component                            ; work         ;
-;          |mux_uce:auto_generated|  ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|lpm_mux0:inst3|lpm_mux:LPM_MUX_component|mux_uce:auto_generated     ; work         ;
-;    |memoria:inst1|                 ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Incrementador|memoria:inst1                                                       ; work         ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Library Name ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; |main                                 ; 93 (0)            ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 42   ; 0            ; |main                                                                                       ; work         ;
+;    |Cargador:inst|                    ; 3 (3)             ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst                                                                         ; work         ;
+;       |memoria:V_F|                   ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst|memoria:V_F                                                             ; work         ;
+;       |memoria:V_I|                   ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst|memoria:V_I                                                             ; work         ;
+;    |Incrementador:Inc|                ; 41 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc                                                                     ; work         ;
+;       |ConvertirBCSaCa2:inst|         ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|ConvertirBCSaCa2:inst                                               ; work         ;
+;       |MaquinaControlMultiplex:inst2| ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|MaquinaControlMultiplex:inst2                                       ; work         ;
+;       |SumadorReCompleto123:inst7|    ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7                                          ; work         ;
+;          |SemiSumador:inst|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SemiSumador:inst                         ; work         ;
+;          |SumadorCompleto:inst10|     ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst10                   ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst10|SemiSumador:inst3 ; work         ;
+;          |SumadorCompleto:inst11|     ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst11                   ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst11|SemiSumador:inst3 ; work         ;
+;          |SumadorCompleto:inst1|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst1                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst1|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst2|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst2                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst2|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst3|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst3                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst3|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst4|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst4                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst4|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst5|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst5                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst5|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst6|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst6                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst6|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst7|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst7                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst7|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst8|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst8                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst8|SemiSumador:inst3  ; work         ;
+;          |SumadorCompleto:inst9|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst9                    ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst9|SemiSumador:inst3  ; work         ;
+;       |lpm_mux0:inst3|                ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3                                                      ; work         ;
+;          |lpm_mux:LPM_MUX_component|  ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3|lpm_mux:LPM_MUX_component                            ; work         ;
+;             |mux_uce:auto_generated|  ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3|lpm_mux:LPM_MUX_component|mux_uce:auto_generated     ; work         ;
+;       |memoria:inst1|                 ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|memoria:inst1                                                       ; work         ;
+;    |ModuloControlador:inst2|          ; 17 (5)            ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2                                                               ; work         ;
+;       |ControllerD0:inst8|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD0:inst8                                            ; work         ;
+;       |ControllerD1:inst9|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD1:inst9                                            ; work         ;
+;       |ControllerD2:inst10|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD2:inst10                                           ; work         ;
+;    |comparador12:inst1|               ; 32 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1                                                                    ; work         ;
+;       |compa4bits:inst1|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa4bits:inst1                                                   ; work         ;
+;          |compa2bits:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa4bits:inst1|compa2bits:inst1                                  ; work         ;
+;       |compa8bits:inst|               ; 12 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst                                                    ; work         ;
+;          |compa4bits:inst1|           ; 7 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1                                   ; work         ;
+;             |compa2bits:inst1|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1|compa2bits:inst1                  ; work         ;
+;             |compa2bits:inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1|compa2bits:inst                   ; work         ;
+;          |compa4bits:inst|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst                                    ; work         ;
+;             |compa2bits:inst1|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst|compa2bits:inst1                   ; work         ;
+;             |compa2bits:inst|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst|compa2bits:inst                    ; work         ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                        ;
-+--------+--------------+---------+--------------+--------------+-------------------------------+------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance               ; IP Include File                                                              ;
-+--------+--------------+---------+--------------+--------------+-------------------------------+------------------------------------------------------------------------------+
-; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |Incrementador|lpm_mux0:inst3 ; C:/Users/maide/OneDrive/Escritorio/Nueva carpeta/IDL_Entregable/lpm_mux0.vhd ;
-+--------+--------------+---------+--------------+--------------+-------------------------------+------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                   ;
++--------+--------------+---------+--------------+--------------+----------------------------------------+----------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                        ; IP Include File                                                ;
++--------+--------------+---------+--------------+--------------+----------------------------------------+----------------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.1    ; N/A          ; N/A          ; |main|Incrementador:Inc|lpm_mux0:inst3 ; C:/Users/exaul/OneDrive/Escritorio/IDL_ENTREGABLE/lpm_mux0.vhd ;
++--------+--------------+---------+--------------+--------------+----------------------------------------+----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -251,32 +280,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14    ;
+; Total registers                              ; 41    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 14    ;
+; Number of registers using Asynchronous Clear ; 41    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 36    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_mux0:inst3|LPM_MUX:LPM_MUX_component ;
-+------------------------+---------------+----------------------------------------------+
-; Parameter Name         ; Value         ; Type                                         ;
-+------------------------+---------------+----------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                               ;
-; LPM_WIDTH              ; 12            ; Signed Integer                               ;
-; LPM_SIZE               ; 2             ; Signed Integer                               ;
-; LPM_WIDTHS             ; 1             ; Signed Integer                               ;
-; LPM_PIPELINE           ; 0             ; Signed Integer                               ;
-; CBXI_PARAMETER         ; mux_uce       ; Untyped                                      ;
-; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                      ;
-+------------------------+---------------+----------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main|comparador12:inst1|inst13 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Incrementador:Inc|lpm_mux0:inst3|LPM_MUX:LPM_MUX_component ;
++------------------------+---------------+----------------------------------------------------------------+
+; Parameter Name         ; Value         ; Type                                                           ;
++------------------------+---------------+----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON            ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF           ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON            ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF           ; IGNORE_CASCADE                                                 ;
+; LPM_WIDTH              ; 12            ; Signed Integer                                                 ;
+; LPM_SIZE               ; 2             ; Signed Integer                                                 ;
+; LPM_WIDTHS             ; 1             ; Signed Integer                                                 ;
+; LPM_PIPELINE           ; 0             ; Signed Integer                                                 ;
+; CBXI_PARAMETER         ; mux_uce       ; Untyped                                                        ;
+; DEVICE_FAMILY          ; Cyclone IV GX ; Untyped                                                        ;
++------------------------+---------------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -295,7 +333,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Jul 28 21:31:37 2025
+    Info: Processing started: Tue Jul 29 16:57:19 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IDL_Integrador -c memoria
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memoria.bdf
@@ -333,18 +371,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file main.bd
     Info (12023): Found entity 1: main
 Info (12021): Found 1 design units, including 1 entities, in source file convertirbcsaca2.bdf
     Info (12023): Found entity 1: ConvertirBCSaCa2
-Info (12127): Elaborating entity "Incrementador" for the top level hierarchy
-Warning (275002): No superset bus at connection
-Info (12128): Elaborating entity "MaquinaControlMultiplex" for hierarchy "MaquinaControlMultiplex:inst2"
-Info (12128): Elaborating entity "SumadorReCompleto123" for hierarchy "SumadorReCompleto123:inst7"
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "ModuloControlador" for hierarchy "ModuloControlador:inst2"
+Warning (275011): Block or symbol "AND3" of instance "inst11" overlaps another block or symbol
+Info (12128): Elaborating entity "ControllerD2" for hierarchy "ModuloControlador:inst2|ControllerD2:inst10"
+Warning (275011): Block or symbol "NOT" of instance "inst13" overlaps another block or symbol
+Info (12128): Elaborating entity "ControllerD1" for hierarchy "ModuloControlador:inst2|ControllerD1:inst9"
+Warning (275011): Block or symbol "NOT" of instance "inst11" overlaps another block or symbol
+Info (12128): Elaborating entity "ControllerD0" for hierarchy "ModuloControlador:inst2|ControllerD0:inst8"
+Warning (275011): Block or symbol "OR2" of instance "inst9" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst10" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst20" overlaps another block or symbol
+Info (12128): Elaborating entity "comparador12" for hierarchy "comparador12:inst1"
+Warning (275011): Block or symbol "compa4bits" of instance "inst1" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst2" overlaps another block or symbol
+Info (12128): Elaborating entity "compa4bits" for hierarchy "comparador12:inst1|compa4bits:inst1"
+Info (12128): Elaborating entity "compa2bits" for hierarchy "comparador12:inst1|compa4bits:inst1|compa2bits:inst"
+Info (12128): Elaborating entity "compa8bits" for hierarchy "comparador12:inst1|compa8bits:inst"
+Warning (275011): Block or symbol "compa4bits" of instance "inst" overlaps another block or symbol
+Warning (12125): Using design file cargador.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Cargador
+Info (12128): Elaborating entity "Cargador" for hierarchy "Cargador:inst"
+Info (12128): Elaborating entity "memoria" for hierarchy "Cargador:inst|memoria:V_I"
+Info (12128): Elaborating entity "Incrementador" for hierarchy "Incrementador:Inc"
+Info (12128): Elaborating entity "MaquinaControlMultiplex" for hierarchy "Incrementador:Inc|MaquinaControlMultiplex:inst2"
+Info (12128): Elaborating entity "SumadorReCompleto123" for hierarchy "Incrementador:Inc|SumadorReCompleto123:inst7"
 Warning (275011): Block or symbol "SumadorCompleto" of instance "inst6" overlaps another block or symbol
-Info (12128): Elaborating entity "SemiSumador" for hierarchy "SumadorReCompleto123:inst7|SemiSumador:inst"
-Info (12128): Elaborating entity "SumadorCompleto" for hierarchy "SumadorReCompleto123:inst7|SumadorCompleto:inst1"
-Info (12128): Elaborating entity "memoria" for hierarchy "memoria:inst1"
-Info (12128): Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:inst3"
-Info (12128): Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component"
-Info (12130): Elaborated megafunction instantiation "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component"
-Info (12133): Instantiated megafunction "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component" with the following parameter:
+Info (12128): Elaborating entity "SemiSumador" for hierarchy "Incrementador:Inc|SumadorReCompleto123:inst7|SemiSumador:inst"
+Info (12128): Elaborating entity "SumadorCompleto" for hierarchy "Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst1"
+Info (12128): Elaborating entity "lpm_mux0" for hierarchy "Incrementador:Inc|lpm_mux0:inst3"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "Incrementador:Inc|lpm_mux0:inst3|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "Incrementador:Inc|lpm_mux0:inst3|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "Incrementador:Inc|lpm_mux0:inst3|LPM_MUX:LPM_MUX_component" with the following parameter:
     Info (12134): Parameter "LPM_WIDTH" = "12"
     Info (12134): Parameter "LPM_SIZE" = "2"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
@@ -353,18 +411,18 @@ Info (12133): Instantiated megafunction "lpm_mux0:inst3|LPM_MUX:LPM_MUX_componen
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_uce.tdf
     Info (12023): Found entity 1: mux_uce
-Info (12128): Elaborating entity "mux_uce" for hierarchy "lpm_mux0:inst3|LPM_MUX:LPM_MUX_component|mux_uce:auto_generated"
-Info (12128): Elaborating entity "ConvertirBCSaCa2" for hierarchy "ConvertirBCSaCa2:inst"
+Info (12128): Elaborating entity "mux_uce" for hierarchy "Incrementador:Inc|lpm_mux0:inst3|LPM_MUX:LPM_MUX_component|mux_uce:auto_generated"
+Info (12128): Elaborating entity "ConvertirBCSaCa2" for hierarchy "Incrementador:Inc|ConvertirBCSaCa2:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 44 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4724 megabytes
-    Info: Processing ended: Mon Jul 28 21:31:39 2025
+Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 117 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4728 megabytes
+    Info: Processing ended: Tue Jul 29 16:57:21 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

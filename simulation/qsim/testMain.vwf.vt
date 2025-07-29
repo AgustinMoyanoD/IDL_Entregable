@@ -1,0 +1,978 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/29/2025 16:57:58"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    main
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module main_vlg_sample_tst(
+	b0,
+	b1,
+	b2,
+	CLK,
+	Continuar,
+	Dato0,
+	Dato1,
+	Dato2,
+	Dato3,
+	Dato4,
+	Dato5,
+	Dato6,
+	Dato7,
+	Dato8,
+	Dato9,
+	Dato10,
+	Dato11,
+	LOAD_F,
+	LOAD_I,
+	Recargar,
+	Reset,
+	Start,
+	updown,
+	sampler_tx
+);
+input  b0;
+input  b1;
+input  b2;
+input  CLK;
+input  Continuar;
+input  Dato0;
+input  Dato1;
+input  Dato2;
+input  Dato3;
+input  Dato4;
+input  Dato5;
+input  Dato6;
+input  Dato7;
+input  Dato8;
+input  Dato9;
+input  Dato10;
+input  Dato11;
+input  LOAD_F;
+input  LOAD_I;
+input  Recargar;
+input  Reset;
+input  Start;
+input  updown;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(b0 or b1 or b2 or CLK or Continuar or Dato0 or Dato1 or Dato2 or Dato3 or Dato4 or Dato5 or Dato6 or Dato7 or Dato8 or Dato9 or Dato10 or Dato11 or LOAD_F or LOAD_I or Recargar or Reset or Start or updown)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module main_vlg_check_tst (
+	Ak_out0,
+	Ak_out1,
+	Ak_out2,
+	Ak_out3,
+	Ak_out4,
+	Ak_out5,
+	Ak_out6,
+	Ak_out7,
+	Ak_out8,
+	Ak_out9,
+	Ak_out10,
+	Ak_out11,
+	ENABLE_COUNT,
+	ERROR,
+	FIN,
+	igual,
+	mayor,
+	menor,
+	PAUSA,
+	sampler_rx
+);
+input  Ak_out0;
+input  Ak_out1;
+input  Ak_out2;
+input  Ak_out3;
+input  Ak_out4;
+input  Ak_out5;
+input  Ak_out6;
+input  Ak_out7;
+input  Ak_out8;
+input  Ak_out9;
+input  Ak_out10;
+input  Ak_out11;
+input  ENABLE_COUNT;
+input  ERROR;
+input  FIN;
+input  igual;
+input  mayor;
+input  menor;
+input  PAUSA;
+input sampler_rx;
+
+reg  Ak_out0_expected;
+reg  Ak_out1_expected;
+reg  Ak_out2_expected;
+reg  Ak_out3_expected;
+reg  Ak_out4_expected;
+reg  Ak_out5_expected;
+reg  Ak_out6_expected;
+reg  Ak_out7_expected;
+reg  Ak_out8_expected;
+reg  Ak_out9_expected;
+reg  Ak_out10_expected;
+reg  Ak_out11_expected;
+reg  ENABLE_COUNT_expected;
+reg  ERROR_expected;
+reg  FIN_expected;
+reg  igual_expected;
+reg  mayor_expected;
+reg  menor_expected;
+reg  PAUSA_expected;
+
+reg  Ak_out0_prev;
+reg  Ak_out1_prev;
+reg  Ak_out2_prev;
+reg  Ak_out3_prev;
+reg  Ak_out4_prev;
+reg  Ak_out5_prev;
+reg  Ak_out6_prev;
+reg  Ak_out7_prev;
+reg  Ak_out8_prev;
+reg  Ak_out9_prev;
+reg  Ak_out10_prev;
+reg  Ak_out11_prev;
+reg  ENABLE_COUNT_prev;
+reg  ERROR_prev;
+reg  FIN_prev;
+reg  igual_prev;
+reg  mayor_prev;
+reg  menor_prev;
+reg  PAUSA_prev;
+
+reg  Ak_out0_expected_prev;
+reg  Ak_out1_expected_prev;
+reg  Ak_out2_expected_prev;
+reg  Ak_out3_expected_prev;
+reg  Ak_out4_expected_prev;
+reg  Ak_out5_expected_prev;
+reg  Ak_out6_expected_prev;
+reg  Ak_out7_expected_prev;
+reg  Ak_out8_expected_prev;
+reg  Ak_out9_expected_prev;
+reg  Ak_out10_expected_prev;
+reg  Ak_out11_expected_prev;
+reg  ENABLE_COUNT_expected_prev;
+reg  ERROR_expected_prev;
+reg  FIN_expected_prev;
+reg  igual_expected_prev;
+reg  mayor_expected_prev;
+reg  menor_expected_prev;
+reg  PAUSA_expected_prev;
+
+reg  last_Ak_out0_exp;
+reg  last_Ak_out1_exp;
+reg  last_Ak_out2_exp;
+reg  last_Ak_out3_exp;
+reg  last_Ak_out4_exp;
+reg  last_Ak_out5_exp;
+reg  last_Ak_out6_exp;
+reg  last_Ak_out7_exp;
+reg  last_Ak_out8_exp;
+reg  last_Ak_out9_exp;
+reg  last_Ak_out10_exp;
+reg  last_Ak_out11_exp;
+reg  last_ENABLE_COUNT_exp;
+reg  last_ERROR_exp;
+reg  last_FIN_exp;
+reg  last_igual_exp;
+reg  last_mayor_exp;
+reg  last_menor_exp;
+reg  last_PAUSA_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:19] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 19'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	Ak_out0_prev = Ak_out0;
+	Ak_out1_prev = Ak_out1;
+	Ak_out2_prev = Ak_out2;
+	Ak_out3_prev = Ak_out3;
+	Ak_out4_prev = Ak_out4;
+	Ak_out5_prev = Ak_out5;
+	Ak_out6_prev = Ak_out6;
+	Ak_out7_prev = Ak_out7;
+	Ak_out8_prev = Ak_out8;
+	Ak_out9_prev = Ak_out9;
+	Ak_out10_prev = Ak_out10;
+	Ak_out11_prev = Ak_out11;
+	ENABLE_COUNT_prev = ENABLE_COUNT;
+	ERROR_prev = ERROR;
+	FIN_prev = FIN;
+	igual_prev = igual;
+	mayor_prev = mayor;
+	menor_prev = menor;
+	PAUSA_prev = PAUSA;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	Ak_out0_expected_prev = Ak_out0_expected;
+	Ak_out1_expected_prev = Ak_out1_expected;
+	Ak_out2_expected_prev = Ak_out2_expected;
+	Ak_out3_expected_prev = Ak_out3_expected;
+	Ak_out4_expected_prev = Ak_out4_expected;
+	Ak_out5_expected_prev = Ak_out5_expected;
+	Ak_out6_expected_prev = Ak_out6_expected;
+	Ak_out7_expected_prev = Ak_out7_expected;
+	Ak_out8_expected_prev = Ak_out8_expected;
+	Ak_out9_expected_prev = Ak_out9_expected;
+	Ak_out10_expected_prev = Ak_out10_expected;
+	Ak_out11_expected_prev = Ak_out11_expected;
+	ENABLE_COUNT_expected_prev = ENABLE_COUNT_expected;
+	ERROR_expected_prev = ERROR_expected;
+	FIN_expected_prev = FIN_expected;
+	igual_expected_prev = igual_expected;
+	mayor_expected_prev = mayor_expected;
+	menor_expected_prev = menor_expected;
+	PAUSA_expected_prev = PAUSA_expected;
+end
+
+
+
+// expected Ak_out11
+initial
+begin
+	Ak_out11_expected = 1'bX;
+end 
+
+// expected Ak_out10
+initial
+begin
+	Ak_out10_expected = 1'bX;
+end 
+
+// expected Ak_out9
+initial
+begin
+	Ak_out9_expected = 1'bX;
+end 
+
+// expected Ak_out8
+initial
+begin
+	Ak_out8_expected = 1'bX;
+end 
+
+// expected Ak_out7
+initial
+begin
+	Ak_out7_expected = 1'bX;
+end 
+
+// expected Ak_out6
+initial
+begin
+	Ak_out6_expected = 1'bX;
+end 
+
+// expected Ak_out5
+initial
+begin
+	Ak_out5_expected = 1'bX;
+end 
+
+// expected Ak_out4
+initial
+begin
+	Ak_out4_expected = 1'bX;
+end 
+
+// expected Ak_out3
+initial
+begin
+	Ak_out3_expected = 1'bX;
+end 
+
+// expected Ak_out2
+initial
+begin
+	Ak_out2_expected = 1'bX;
+end 
+
+// expected Ak_out1
+initial
+begin
+	Ak_out1_expected = 1'bX;
+end 
+
+// expected Ak_out0
+initial
+begin
+	Ak_out0_expected = 1'bX;
+end 
+
+// expected ENABLE_COUNT
+initial
+begin
+	ENABLE_COUNT_expected = 1'bX;
+end 
+
+// expected ERROR
+initial
+begin
+	ERROR_expected = 1'bX;
+end 
+
+// expected FIN
+initial
+begin
+	FIN_expected = 1'bX;
+end 
+
+// expected PAUSA
+initial
+begin
+	PAUSA_expected = 1'bX;
+end 
+
+// expected mayor
+initial
+begin
+	mayor_expected = 1'bX;
+end 
+
+// expected menor
+initial
+begin
+	menor_expected = 1'bX;
+end 
+
+// expected igual
+initial
+begin
+	igual_expected = 1'bX;
+end 
+// generate trigger
+always @(Ak_out0_expected or Ak_out0 or Ak_out1_expected or Ak_out1 or Ak_out2_expected or Ak_out2 or Ak_out3_expected or Ak_out3 or Ak_out4_expected or Ak_out4 or Ak_out5_expected or Ak_out5 or Ak_out6_expected or Ak_out6 or Ak_out7_expected or Ak_out7 or Ak_out8_expected or Ak_out8 or Ak_out9_expected or Ak_out9 or Ak_out10_expected or Ak_out10 or Ak_out11_expected or Ak_out11 or ENABLE_COUNT_expected or ENABLE_COUNT or ERROR_expected or ERROR or FIN_expected or FIN or igual_expected or igual or mayor_expected or mayor or menor_expected or menor or PAUSA_expected or PAUSA)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected Ak_out0 = %b | expected Ak_out1 = %b | expected Ak_out2 = %b | expected Ak_out3 = %b | expected Ak_out4 = %b | expected Ak_out5 = %b | expected Ak_out6 = %b | expected Ak_out7 = %b | expected Ak_out8 = %b | expected Ak_out9 = %b | expected Ak_out10 = %b | expected Ak_out11 = %b | expected ENABLE_COUNT = %b | expected ERROR = %b | expected FIN = %b | expected igual = %b | expected mayor = %b | expected menor = %b | expected PAUSA = %b | ",Ak_out0_expected_prev,Ak_out1_expected_prev,Ak_out2_expected_prev,Ak_out3_expected_prev,Ak_out4_expected_prev,Ak_out5_expected_prev,Ak_out6_expected_prev,Ak_out7_expected_prev,Ak_out8_expected_prev,Ak_out9_expected_prev,Ak_out10_expected_prev,Ak_out11_expected_prev,ENABLE_COUNT_expected_prev,ERROR_expected_prev,FIN_expected_prev,igual_expected_prev,mayor_expected_prev,menor_expected_prev,PAUSA_expected_prev);
+	$display("| real Ak_out0 = %b | real Ak_out1 = %b | real Ak_out2 = %b | real Ak_out3 = %b | real Ak_out4 = %b | real Ak_out5 = %b | real Ak_out6 = %b | real Ak_out7 = %b | real Ak_out8 = %b | real Ak_out9 = %b | real Ak_out10 = %b | real Ak_out11 = %b | real ENABLE_COUNT = %b | real ERROR = %b | real FIN = %b | real igual = %b | real mayor = %b | real menor = %b | real PAUSA = %b | ",Ak_out0_prev,Ak_out1_prev,Ak_out2_prev,Ak_out3_prev,Ak_out4_prev,Ak_out5_prev,Ak_out6_prev,Ak_out7_prev,Ak_out8_prev,Ak_out9_prev,Ak_out10_prev,Ak_out11_prev,ENABLE_COUNT_prev,ERROR_prev,FIN_prev,igual_prev,mayor_prev,menor_prev,PAUSA_prev);
+`endif
+	if (
+		( Ak_out0_expected_prev !== 1'bx ) && ( Ak_out0_prev !== Ak_out0_expected_prev )
+		&& ((Ak_out0_expected_prev !== last_Ak_out0_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out0_expected_prev);
+		$display ("     Real value = %b", Ak_out0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_Ak_out0_exp = Ak_out0_expected_prev;
+	end
+	if (
+		( Ak_out1_expected_prev !== 1'bx ) && ( Ak_out1_prev !== Ak_out1_expected_prev )
+		&& ((Ak_out1_expected_prev !== last_Ak_out1_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out1_expected_prev);
+		$display ("     Real value = %b", Ak_out1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_Ak_out1_exp = Ak_out1_expected_prev;
+	end
+	if (
+		( Ak_out2_expected_prev !== 1'bx ) && ( Ak_out2_prev !== Ak_out2_expected_prev )
+		&& ((Ak_out2_expected_prev !== last_Ak_out2_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out2_expected_prev);
+		$display ("     Real value = %b", Ak_out2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_Ak_out2_exp = Ak_out2_expected_prev;
+	end
+	if (
+		( Ak_out3_expected_prev !== 1'bx ) && ( Ak_out3_prev !== Ak_out3_expected_prev )
+		&& ((Ak_out3_expected_prev !== last_Ak_out3_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out3_expected_prev);
+		$display ("     Real value = %b", Ak_out3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_Ak_out3_exp = Ak_out3_expected_prev;
+	end
+	if (
+		( Ak_out4_expected_prev !== 1'bx ) && ( Ak_out4_prev !== Ak_out4_expected_prev )
+		&& ((Ak_out4_expected_prev !== last_Ak_out4_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out4 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out4_expected_prev);
+		$display ("     Real value = %b", Ak_out4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_Ak_out4_exp = Ak_out4_expected_prev;
+	end
+	if (
+		( Ak_out5_expected_prev !== 1'bx ) && ( Ak_out5_prev !== Ak_out5_expected_prev )
+		&& ((Ak_out5_expected_prev !== last_Ak_out5_exp) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out5 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out5_expected_prev);
+		$display ("     Real value = %b", Ak_out5_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_Ak_out5_exp = Ak_out5_expected_prev;
+	end
+	if (
+		( Ak_out6_expected_prev !== 1'bx ) && ( Ak_out6_prev !== Ak_out6_expected_prev )
+		&& ((Ak_out6_expected_prev !== last_Ak_out6_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out6 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out6_expected_prev);
+		$display ("     Real value = %b", Ak_out6_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_Ak_out6_exp = Ak_out6_expected_prev;
+	end
+	if (
+		( Ak_out7_expected_prev !== 1'bx ) && ( Ak_out7_prev !== Ak_out7_expected_prev )
+		&& ((Ak_out7_expected_prev !== last_Ak_out7_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out7 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out7_expected_prev);
+		$display ("     Real value = %b", Ak_out7_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_Ak_out7_exp = Ak_out7_expected_prev;
+	end
+	if (
+		( Ak_out8_expected_prev !== 1'bx ) && ( Ak_out8_prev !== Ak_out8_expected_prev )
+		&& ((Ak_out8_expected_prev !== last_Ak_out8_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out8 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out8_expected_prev);
+		$display ("     Real value = %b", Ak_out8_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_Ak_out8_exp = Ak_out8_expected_prev;
+	end
+	if (
+		( Ak_out9_expected_prev !== 1'bx ) && ( Ak_out9_prev !== Ak_out9_expected_prev )
+		&& ((Ak_out9_expected_prev !== last_Ak_out9_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out9 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out9_expected_prev);
+		$display ("     Real value = %b", Ak_out9_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_Ak_out9_exp = Ak_out9_expected_prev;
+	end
+	if (
+		( Ak_out10_expected_prev !== 1'bx ) && ( Ak_out10_prev !== Ak_out10_expected_prev )
+		&& ((Ak_out10_expected_prev !== last_Ak_out10_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out10 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out10_expected_prev);
+		$display ("     Real value = %b", Ak_out10_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_Ak_out10_exp = Ak_out10_expected_prev;
+	end
+	if (
+		( Ak_out11_expected_prev !== 1'bx ) && ( Ak_out11_prev !== Ak_out11_expected_prev )
+		&& ((Ak_out11_expected_prev !== last_Ak_out11_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port Ak_out11 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", Ak_out11_expected_prev);
+		$display ("     Real value = %b", Ak_out11_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_Ak_out11_exp = Ak_out11_expected_prev;
+	end
+	if (
+		( ENABLE_COUNT_expected_prev !== 1'bx ) && ( ENABLE_COUNT_prev !== ENABLE_COUNT_expected_prev )
+		&& ((ENABLE_COUNT_expected_prev !== last_ENABLE_COUNT_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ENABLE_COUNT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ENABLE_COUNT_expected_prev);
+		$display ("     Real value = %b", ENABLE_COUNT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_ENABLE_COUNT_exp = ENABLE_COUNT_expected_prev;
+	end
+	if (
+		( ERROR_expected_prev !== 1'bx ) && ( ERROR_prev !== ERROR_expected_prev )
+		&& ((ERROR_expected_prev !== last_ERROR_exp) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ERROR :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ERROR_expected_prev);
+		$display ("     Real value = %b", ERROR_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_ERROR_exp = ERROR_expected_prev;
+	end
+	if (
+		( FIN_expected_prev !== 1'bx ) && ( FIN_prev !== FIN_expected_prev )
+		&& ((FIN_expected_prev !== last_FIN_exp) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port FIN :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", FIN_expected_prev);
+		$display ("     Real value = %b", FIN_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_FIN_exp = FIN_expected_prev;
+	end
+	if (
+		( igual_expected_prev !== 1'bx ) && ( igual_prev !== igual_expected_prev )
+		&& ((igual_expected_prev !== last_igual_exp) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port igual :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", igual_expected_prev);
+		$display ("     Real value = %b", igual_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_igual_exp = igual_expected_prev;
+	end
+	if (
+		( mayor_expected_prev !== 1'bx ) && ( mayor_prev !== mayor_expected_prev )
+		&& ((mayor_expected_prev !== last_mayor_exp) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port mayor :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", mayor_expected_prev);
+		$display ("     Real value = %b", mayor_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_mayor_exp = mayor_expected_prev;
+	end
+	if (
+		( menor_expected_prev !== 1'bx ) && ( menor_prev !== menor_expected_prev )
+		&& ((menor_expected_prev !== last_menor_exp) ||
+			on_first_change[18])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port menor :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", menor_expected_prev);
+		$display ("     Real value = %b", menor_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[18] = 1'b0;
+		last_menor_exp = menor_expected_prev;
+	end
+	if (
+		( PAUSA_expected_prev !== 1'bx ) && ( PAUSA_prev !== PAUSA_expected_prev )
+		&& ((PAUSA_expected_prev !== last_PAUSA_exp) ||
+			on_first_change[19])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port PAUSA :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", PAUSA_expected_prev);
+		$display ("     Real value = %b", PAUSA_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[19] = 1'b0;
+		last_PAUSA_exp = PAUSA_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module main_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg b0;
+reg b1;
+reg b2;
+reg CLK;
+reg Continuar;
+reg Dato0;
+reg Dato1;
+reg Dato2;
+reg Dato3;
+reg Dato4;
+reg Dato5;
+reg Dato6;
+reg Dato7;
+reg Dato8;
+reg Dato9;
+reg Dato10;
+reg Dato11;
+reg LOAD_F;
+reg LOAD_I;
+reg Recargar;
+reg Reset;
+reg Start;
+reg updown;
+// wires                                               
+wire Ak_out0;
+wire Ak_out1;
+wire Ak_out2;
+wire Ak_out3;
+wire Ak_out4;
+wire Ak_out5;
+wire Ak_out6;
+wire Ak_out7;
+wire Ak_out8;
+wire Ak_out9;
+wire Ak_out10;
+wire Ak_out11;
+wire ENABLE_COUNT;
+wire ERROR;
+wire FIN;
+wire igual;
+wire mayor;
+wire menor;
+wire PAUSA;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+main i1 (
+// port map - connection between master ports and signals/registers   
+	.Ak_out0(Ak_out0),
+	.Ak_out1(Ak_out1),
+	.Ak_out2(Ak_out2),
+	.Ak_out3(Ak_out3),
+	.Ak_out4(Ak_out4),
+	.Ak_out5(Ak_out5),
+	.Ak_out6(Ak_out6),
+	.Ak_out7(Ak_out7),
+	.Ak_out8(Ak_out8),
+	.Ak_out9(Ak_out9),
+	.Ak_out10(Ak_out10),
+	.Ak_out11(Ak_out11),
+	.b0(b0),
+	.b1(b1),
+	.b2(b2),
+	.CLK(CLK),
+	.Continuar(Continuar),
+	.Dato0(Dato0),
+	.Dato1(Dato1),
+	.Dato2(Dato2),
+	.Dato3(Dato3),
+	.Dato4(Dato4),
+	.Dato5(Dato5),
+	.Dato6(Dato6),
+	.Dato7(Dato7),
+	.Dato8(Dato8),
+	.Dato9(Dato9),
+	.Dato10(Dato10),
+	.Dato11(Dato11),
+	.ENABLE_COUNT(ENABLE_COUNT),
+	.ERROR(ERROR),
+	.FIN(FIN),
+	.igual(igual),
+	.LOAD_F(LOAD_F),
+	.LOAD_I(LOAD_I),
+	.mayor(mayor),
+	.menor(menor),
+	.PAUSA(PAUSA),
+	.Recargar(Recargar),
+	.Reset(Reset),
+	.Start(Start),
+	.updown(updown)
+);
+
+// b2
+initial
+begin
+	b2 = 1'b0;
+end 
+
+// b1
+initial
+begin
+	b1 = 1'b1;
+end 
+
+// b0
+initial
+begin
+	b0 = 1'b0;
+end 
+
+// updown
+initial
+begin
+	updown = 1'b0;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #5000 1'b1;
+	#5000;
+end 
+
+// Continuar
+initial
+begin
+	Continuar = 1'b0;
+end 
+
+// Dato11
+initial
+begin
+	Dato11 = 1'b0;
+end 
+
+// Dato10
+initial
+begin
+	Dato10 = 1'b0;
+end 
+
+// Dato9
+initial
+begin
+	Dato9 = 1'b0;
+end 
+
+// Dato8
+initial
+begin
+	Dato8 = 1'b0;
+end 
+
+// Dato7
+initial
+begin
+	Dato7 = 1'b0;
+end 
+
+// Dato6
+initial
+begin
+	Dato6 = 1'b0;
+end 
+
+// Dato5
+initial
+begin
+	Dato5 = 1'b0;
+end 
+
+// Dato4
+initial
+begin
+	Dato4 = 1'b0;
+	Dato4 = #60000 1'b1;
+	Dato4 = #40000 1'b0;
+end 
+
+// Dato3
+initial
+begin
+	Dato3 = 1'b0;
+end 
+
+// Dato2
+initial
+begin
+	Dato2 = 1'b0;
+end 
+
+// Dato1
+initial
+begin
+	Dato1 = 1'b0;
+	Dato1 = #60000 1'b1;
+	Dato1 = #40000 1'b0;
+end 
+
+// Dato0
+initial
+begin
+	Dato0 = 1'b0;
+end 
+
+// LOAD_F
+initial
+begin
+	LOAD_F = 1'b0;
+	LOAD_F = #40000 1'b1;
+	LOAD_F = #60000 1'b0;
+end 
+
+// LOAD_I
+initial
+begin
+	LOAD_I = 1'b0;
+	LOAD_I = #10000 1'b1;
+	LOAD_I = #30000 1'b0;
+end 
+
+// Recargar
+initial
+begin
+	Recargar = 1'b0;
+end 
+
+// Reset
+initial
+begin
+	Reset = 1'b0;
+	Reset = #10000 1'b1;
+end 
+
+// Start
+initial
+begin
+	Start = 1'b0;
+	Start = #150000 1'b1;
+end 
+
+main_vlg_sample_tst tb_sample (
+	.b0(b0),
+	.b1(b1),
+	.b2(b2),
+	.CLK(CLK),
+	.Continuar(Continuar),
+	.Dato0(Dato0),
+	.Dato1(Dato1),
+	.Dato2(Dato2),
+	.Dato3(Dato3),
+	.Dato4(Dato4),
+	.Dato5(Dato5),
+	.Dato6(Dato6),
+	.Dato7(Dato7),
+	.Dato8(Dato8),
+	.Dato9(Dato9),
+	.Dato10(Dato10),
+	.Dato11(Dato11),
+	.LOAD_F(LOAD_F),
+	.LOAD_I(LOAD_I),
+	.Recargar(Recargar),
+	.Reset(Reset),
+	.Start(Start),
+	.updown(updown),
+	.sampler_tx(sampler)
+);
+
+main_vlg_check_tst tb_out(
+	.Ak_out0(Ak_out0),
+	.Ak_out1(Ak_out1),
+	.Ak_out2(Ak_out2),
+	.Ak_out3(Ak_out3),
+	.Ak_out4(Ak_out4),
+	.Ak_out5(Ak_out5),
+	.Ak_out6(Ak_out6),
+	.Ak_out7(Ak_out7),
+	.Ak_out8(Ak_out8),
+	.Ak_out9(Ak_out9),
+	.Ak_out10(Ak_out10),
+	.Ak_out11(Ak_out11),
+	.ENABLE_COUNT(ENABLE_COUNT),
+	.ERROR(ERROR),
+	.FIN(FIN),
+	.igual(igual),
+	.mayor(mayor),
+	.menor(menor),
+	.PAUSA(PAUSA),
+	.sampler_rx(sampler)
+);
+endmodule
+
