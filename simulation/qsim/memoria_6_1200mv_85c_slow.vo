@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "07/30/2025 01:40:59"
+// DATE "07/30/2025 01:35:29"
 
 // 
 // Device: Altera EP4CGX22CF19C6 Package FBGA324
@@ -170,6 +170,10 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("memoria_6_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
 wire \FIN~output_o ;
 wire \PAUSA~output_o ;
 wire \ENABLE_COUNT~output_o ;

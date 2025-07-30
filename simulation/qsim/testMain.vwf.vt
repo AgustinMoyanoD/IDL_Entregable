@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/29/2025 17:27:08"
+// Generated on "07/30/2025 01:40:58"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    main
 // 
@@ -839,8 +839,6 @@ begin
 	Dato3 = 1'b0;
 	Dato3 = #30000 1'b1;
 	Dato3 = #300000 1'b0;
-	Dato3 = #90000 1'b1;
-	Dato3 = #320000 1'b0;
 end 
 
 // Dato2
@@ -850,7 +848,7 @@ begin
 	Dato2 = #30000 1'b1;
 	Dato2 = #300000 1'b0;
 	Dato2 = #90000 1'b1;
-	Dato2 = #320000 1'b0;
+	Dato2 = #130000 1'b0;
 end 
 
 // Dato1
@@ -859,6 +857,8 @@ begin
 	Dato1 = 1'b0;
 	Dato1 = #30000 1'b1;
 	Dato1 = #300000 1'b0;
+	Dato1 = #90000 1'b1;
+	Dato1 = #130000 1'b0;
 end 
 
 // Dato0
@@ -880,7 +880,14 @@ initial
 begin
 	LOAD_I = 1'b0;
 	LOAD_I = #420000 1'b1;
-	LOAD_I = #320000 1'b0;
+	LOAD_I = #130000 1'b0;
+end 
+
+// Start
+initial
+begin
+	Start = 1'b0;
+	Start = #560000 1'b1;
 end 
 
 // b0
@@ -918,13 +925,6 @@ initial
 begin
 	Reset = 1'b0;
 	Reset = #10000 1'b1;
-end 
-
-// Start
-initial
-begin
-	Start = 1'b0;
-	Start = #820000 1'b1;
 end 
 
 // updown

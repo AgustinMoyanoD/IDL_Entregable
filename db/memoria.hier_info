@@ -1,11 +1,11 @@
 |main
 FIN <= ModuloControlador:inst2.Fin
 b2 => ModuloControlador:inst2.M_b2
-b2 => Incrementador:Inc.b2
+b2 => inst4.IN1
 b1 => ModuloControlador:inst2.M_b1
-b1 => Incrementador:Inc.b1
+b1 => inst5.IN1
 b0 => ModuloControlador:inst2.M_b0
-b0 => Incrementador:Inc.b0
+b0 => inst6.IN1
 Recargar => ModuloControlador:inst2.M_Recargar
 LOAD_I => ModuloControlador:inst2.M_loadI
 LOAD_I => Cargador:inst.LOAD_I
