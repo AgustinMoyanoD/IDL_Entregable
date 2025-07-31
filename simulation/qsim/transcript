@@ -26,6 +26,9 @@
 # Loading work.main_vlg_sample_tst
 # Loading work.main_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# Simulation passed !
-# ** Note: $finish    : testMain.vwf.vt(678)
+# ERROR! Vector Mismatch for output port PAUSA :: @time = 670000.000 ps
+#      Expected value = 0
+#      Real value = 1
+#           1 mismatched vectors : Simulation failed !
+# ** Note: $finish    : testMain.vwf.vt(680)
 #    Time: 1 us  Iteration: 0  Instance: /main_vlg_vec_tst/tb_out

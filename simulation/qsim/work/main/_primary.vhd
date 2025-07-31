@@ -11,7 +11,6 @@ entity main is
         LOAD_F          : in     vl_logic;
         Continuar       : in     vl_logic;
         CLK             : in     vl_logic;
-        Reset           : in     vl_logic;
         Dato0           : in     vl_logic;
         Dato1           : in     vl_logic;
         Dato2           : in     vl_logic;
@@ -24,6 +23,7 @@ entity main is
         Dato9           : in     vl_logic;
         Dato10          : in     vl_logic;
         Dato11          : in     vl_logic;
+        Reset           : in     vl_logic;
         updown          : in     vl_logic;
         Start           : in     vl_logic;
         PAUSA           : out    vl_logic;

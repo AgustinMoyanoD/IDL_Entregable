@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memoria
-Wed Jul 30 01:39:37 2025
+Thu Jul 31 18:37:30 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jul 30 01:39:37 2025      ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 31 18:37:30 2025      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; memoria                                    ;
 ; Top-level Entity Name              ; main                                       ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 121                                        ;
-;     Total combinational functions  ; 97                                         ;
+; Total logic elements               ; 122                                        ;
+;     Total combinational functions  ; 98                                         ;
 ;     Dedicated logic registers      ; 41                                         ;
 ; Total registers                    ; 41                                         ;
 ; Total pins                         ; 42                                         ;
@@ -203,66 +203,54 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; DSP block 9-bit elements ; 0                ;
 ; Maximum fan-out node     ; CLK~input        ;
 ; Maximum fan-out          ; 41               ;
-; Total fan-out            ; 578              ;
-; Average fan-out          ; 2.60             ;
+; Total fan-out            ; 557              ;
+; Average fan-out          ; 2.50             ;
 +--------------------------+------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
-+---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Library Name ;
-+---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
-; |main                                 ; 97 (1)            ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 42   ; 0            ; |main                                                                                       ; work         ;
-;    |Cargador:inst|                    ; 3 (3)             ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst                                                                         ; work         ;
-;       |memoria:V_F|                   ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst|memoria:V_F                                                             ; work         ;
-;       |memoria:V_I|                   ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst|memoria:V_I                                                             ; work         ;
-;    |Incrementador:Inc|                ; 44 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc                                                                     ; work         ;
-;       |ConvertirBCSaCa2:inst|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|ConvertirBCSaCa2:inst                                               ; work         ;
-;       |MaquinaControlMultiplex:inst2| ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|MaquinaControlMultiplex:inst2                                       ; work         ;
-;       |SumadorReCompleto123:inst7|    ; 22 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7                                          ; work         ;
-;          |SemiSumador:inst|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SemiSumador:inst                         ; work         ;
-;          |SumadorCompleto:inst10|     ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst10                   ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst10|SemiSumador:inst3 ; work         ;
-;          |SumadorCompleto:inst11|     ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst11                   ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst11|SemiSumador:inst3 ; work         ;
-;          |SumadorCompleto:inst1|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst1                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst1|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst2|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst2                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst2|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst3|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst3                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst3|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst4|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst4                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst4|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst5|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst5                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst5|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst6|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst6                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst6|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst7|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst7                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst7|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst8|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst8                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst8|SemiSumador:inst3  ; work         ;
-;          |SumadorCompleto:inst9|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst9                    ; work         ;
-;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst9|SemiSumador:inst3  ; work         ;
-;       |lpm_mux0:inst3|                ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3                                                      ; work         ;
-;          |lpm_mux:LPM_MUX_component|  ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3|lpm_mux:LPM_MUX_component                            ; work         ;
-;             |mux_uce:auto_generated|  ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3|lpm_mux:LPM_MUX_component|mux_uce:auto_generated     ; work         ;
-;       |memoria:inst1|                 ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|memoria:inst1                                                       ; work         ;
-;    |ModuloControlador:inst2|          ; 18 (6)            ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2                                                               ; work         ;
-;       |ControllerD0:inst8|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD0:inst8                                            ; work         ;
-;       |ControllerD1:inst9|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD1:inst9                                            ; work         ;
-;       |ControllerD2:inst10|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD2:inst10                                           ; work         ;
-;    |comparador12:inst1|               ; 31 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1                                                                    ; work         ;
-;       |compa4bits:inst1|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa4bits:inst1                                                   ; work         ;
-;          |compa2bits:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa4bits:inst1|compa2bits:inst1                                  ; work         ;
-;       |compa8bits:inst|               ; 14 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst                                                    ; work         ;
-;          |compa4bits:inst1|           ; 7 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1                                   ; work         ;
-;             |compa2bits:inst1|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1|compa2bits:inst1                  ; work         ;
-;             |compa2bits:inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1|compa2bits:inst                   ; work         ;
-;          |compa4bits:inst|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst                                    ; work         ;
-;             |compa2bits:inst1|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst|compa2bits:inst1                   ; work         ;
-;             |compa2bits:inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst|compa2bits:inst                    ; work         ;
-+---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Library Name ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
+; |main                                 ; 98 (3)            ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 42   ; 0            ; |main                                                                                      ; work         ;
+;    |Cargador:inst|                    ; 3 (3)             ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst                                                                        ; work         ;
+;       |memoria:V_F|                   ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst|memoria:V_F                                                            ; work         ;
+;       |memoria:V_I|                   ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Cargador:inst|memoria:V_I                                                            ; work         ;
+;    |Incrementador:Inc|                ; 43 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc                                                                    ; work         ;
+;       |ConvertirBCSaCa2:inst|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|ConvertirBCSaCa2:inst                                              ; work         ;
+;       |MaquinaControlMultiplex:inst2| ; 4 (4)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|MaquinaControlMultiplex:inst2                                      ; work         ;
+;       |SumadorReCompleto123:inst7|    ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7                                         ; work         ;
+;          |SumadorCompleto:inst10|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst10                  ; work         ;
+;          |SumadorCompleto:inst1|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst1                   ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst1|SemiSumador:inst3 ; work         ;
+;          |SumadorCompleto:inst2|      ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst2                   ; work         ;
+;             |SemiSumador:inst3|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst2|SemiSumador:inst3 ; work         ;
+;          |SumadorCompleto:inst3|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst3                   ; work         ;
+;          |SumadorCompleto:inst4|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst4                   ; work         ;
+;          |SumadorCompleto:inst5|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst5                   ; work         ;
+;          |SumadorCompleto:inst6|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst6                   ; work         ;
+;          |SumadorCompleto:inst7|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst7                   ; work         ;
+;          |SumadorCompleto:inst9|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|SumadorReCompleto123:inst7|SumadorCompleto:inst9                   ; work         ;
+;       |lpm_mux0:inst3|                ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3                                                     ; work         ;
+;          |lpm_mux:LPM_MUX_component|  ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3|lpm_mux:LPM_MUX_component                           ; work         ;
+;             |mux_uce:auto_generated|  ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|lpm_mux0:inst3|lpm_mux:LPM_MUX_component|mux_uce:auto_generated    ; work         ;
+;       |memoria:inst1|                 ; 0 (0)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|Incrementador:Inc|memoria:inst1                                                      ; work         ;
+;    |ModuloControlador:inst2|          ; 18 (7)            ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2                                                              ; work         ;
+;       |ControllerD0:inst8|            ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD0:inst8                                           ; work         ;
+;       |ControllerD1:inst9|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD1:inst9                                           ; work         ;
+;       |ControllerD2:inst10|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|ModuloControlador:inst2|ControllerD2:inst10                                          ; work         ;
+;    |comparador12:inst1|               ; 31 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1                                                                   ; work         ;
+;       |compa4bits:inst1|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa4bits:inst1                                                  ; work         ;
+;          |compa2bits:inst1|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa4bits:inst1|compa2bits:inst1                                 ; work         ;
+;       |compa8bits:inst|               ; 14 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst                                                   ; work         ;
+;          |compa4bits:inst1|           ; 7 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1                                  ; work         ;
+;             |compa2bits:inst1|        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1|compa2bits:inst1                 ; work         ;
+;             |compa2bits:inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst1|compa2bits:inst                  ; work         ;
+;          |compa4bits:inst|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst                                   ; work         ;
+;             |compa2bits:inst1|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst|compa2bits:inst1                  ; work         ;
+;             |compa2bits:inst|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |main|comparador12:inst1|compa8bits:inst|compa4bits:inst|compa2bits:inst                   ; work         ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -283,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 41    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 41    ;
+; Number of registers using Asynchronous Clear ; 17    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 36    ;
 ; Number of registers using Preset             ; 0     ;
@@ -333,7 +321,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jul 30 01:39:35 2025
+    Info: Processing started: Thu Jul 31 18:37:29 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off IDL_Integrador -c memoria
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memoria.bdf
@@ -416,14 +404,14 @@ Info (12128): Elaborating entity "ConvertirBCSaCa2" for hierarchy "Incrementador
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 163 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 176 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 121 logic cells
+    Info (21061): Implemented 134 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Wed Jul 30 01:39:37 2025
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Thu Jul 31 18:37:30 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
